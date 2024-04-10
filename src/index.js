@@ -30,7 +30,7 @@ app.post("/signup", async (req,res) => {
 
     const existingUser = await collection.findOne({name: data.name});
     if (existingUser) {
-        res.send("User already existing.");
+        res.render("user_exists");
     } else {
         // Hashing password
         const saltRounds = 10;
@@ -40,25 +40,27 @@ app.post("/signup", async (req,res) => {
 
         const userdata = await collection.insertMany(data);
         console.log(userdata);
+
+        res.render("home", {username: data.name, password: data.password});
     } 
 });
 
 
-app.post("/login", async (req,res) => {
+app.post("/login", async (req, res) => {
     try {
-        const check = await collection.findOne({name: req.body.username});
-        if(!check) {
-            res.send("Username cannot be found.");
-        } 
-
-        const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
-        if(isPasswordMatch) {
-            res.render("home");
+        const check = await collection.findOne({ name: req.body.username });
+        if (!check) {
+            res.render("user_cannot_be_found");
         } else {
-            req.send("Wrong password.");
+            const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+            if (isPasswordMatch) {
+                res.render("home");
+            } else {
+                res.render("wrong_password");
+            }
         }
     } catch {
-        res.send("Wrong details.");
+        res.send("Unaspected error: err -> Wrong details.");
     }
 });
 
@@ -66,4 +68,3 @@ const port = 5000;
 app.listen(port, () => {
     console.log(`Server running on Port: ${port}`);
 });
-

@@ -22,3 +22,5 @@ const LoginSchema = new mongoose.Schema({
 const collection = new mongoose.model("users", LoginSchema);
 
 module.exports = collection;
+
+// To run the server, firstly type in: npm install express mongoose body-parser --- into a terminal: CTRL + ~
