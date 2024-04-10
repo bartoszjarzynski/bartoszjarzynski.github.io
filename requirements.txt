@@ -1,0 +1,5 @@
+mongodb~=v7.0.8
+nodejs~=v21.7.2
+
+npm install express mongoose body-parser
+nodemon src/index.js
