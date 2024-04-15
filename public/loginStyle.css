@@ -1,0 +1,61 @@
+/* Style entire document */
+* {
+    font-family: sans-serif;
+    background-color: #fffae6;
+  }
+  
+  /* Login page main div */
+  .form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Logo */
+  .form-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto;
+  }
+  
+  /* Labels: username&password */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Label fields */
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+  }
+  
+  /* Label submit */
+  .container-submit-btn {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  /* Submit button on hover */
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family: sans-serif
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(lightpink, lightblue);
+  background-color: #fffae6;
 }
 
 h2 {

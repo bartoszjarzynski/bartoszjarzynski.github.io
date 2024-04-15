@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="/style.css" />
+    <title>BankPWA Login</title>
+    <link rel="stylesheet" href="/loginStyle.css" />
   </head>
 
   <body>
     <div class="form-container">
-      <h2>Login</h2>
+      
+      <img src="public/Logo.jpg"/>
+
       <form action="/login" method="post">
         <div class="form-group">
-          <label for="name">Username</label>
+          <label for="name"></label>
           <input
             type="text"
-            id="name"
+            id="username"
             name="username"
             placeholder="Enter your username"
             required
@@ -24,7 +26,7 @@
         </div>
 
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password"></label>
           <input
             type="password"
             name="password"
@@ -35,9 +37,8 @@
         </div>
 
         <div class="container-submit-btn">
-            <button class="submit-btn">Login</button>
+          <button class="submit-btn">Sign in</button>
         </div>
-
       </form>
       <p>Don't have an account? <a href="/signup">Sign up</a></p>
     </div>
