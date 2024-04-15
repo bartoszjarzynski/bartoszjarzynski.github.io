@@ -2,25 +2,25 @@
 * {
     font-family: sans-serif;
     background-color: #fffae6;
-  }
-  
-  /* Login page main div */
-  .form-container {
+}
+
+/* Login page main div */
+.form-container {
     max-width: 400px;
     margin: 100px auto;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-  
-  /* Logo */
-  .form-container img {
+}
+
+/* Logo */
+.form-container img {
     max-width: 100%;
     height: auto;
     margin-bottom: auto;
-  }
-  
-  /* Labels: username&password */
+}
+
+/* Labels: username&password */
 .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -68,15 +68,16 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-  
-  /* Label submit */
-  .container-submit-btn {
+
+
+/* Label submit */
+.container-submit-btn {
     margin-top: 10px;
     text-align: center;
-  }
-  
-  /* Submit button */
-  .submit-btn {
+}
+
+/* Submit button */
+.submit-btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -84,13 +85,13 @@
     border-radius: 15px;
     cursor: pointer;
     transition: 0.5s;
-  }
-  
-  /* Submit button on hover */
-  .submit-btn:hover {
+}
+
+/* Submit button on hover */
+.submit-btn:hover {
     background-color: #0056b3;
-  }
-  
+}
+
 p {
     margin-top: 100px;
 }

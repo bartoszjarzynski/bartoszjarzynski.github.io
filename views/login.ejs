@@ -10,23 +10,31 @@
   <body>
     <div class="form-container">
       
-      <img src="public/Logo.jpg"/>
+      <img src="public/images/Logo.png"/>
+
+      <h1>Sign in</h1>
+      <h3>Insert login and password to log in</h3>
 
       <form action="/login" method="post">
         <div class="form-group">
           <label for="name"></label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
-            required
-            autocomplete="off"
-          />
+          <div class="input-with-icon">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+              autocomplete="off"
+            />
+            <span class="input-icon-username"></span>
+          </div>
         </div>
+      </form>
 
-        <div class="form-group">
-          <label for="password"></label>
+      <div class="form-group">
+        <label for="password"></label>
+        <div class="input-with-icon">
           <input
             type="password"
             name="password"
@@ -34,13 +42,17 @@
             placeholder="Enter your password"
             required
           />
+          <span class="input-icon-password"></span>
         </div>
+      </div>
 
         <div class="container-submit-btn">
           <button class="submit-btn">Sign in</button>
         </div>
       </form>
+
       <p>Don't have an account? <a href="/signup">Sign up</a></p>
+      
     </div>
   </body>
 </html>
