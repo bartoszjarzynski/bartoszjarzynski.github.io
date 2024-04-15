@@ -1,8 +1,19 @@
-/* Style entire document */
 * {
+    animation: slideAndFadeIn 0.8s ease-in-out forwards;
     font-family: sans-serif;
     background-color: #fffae6;
-}
+  }
+  
+  @keyframes slideAndFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px); /* Move elements up by 50px */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move elements back to their normal position */
+    }
+  }
 
 /* Login page main div */
 .form-container {
@@ -48,8 +59,7 @@
     background-color: #fff;
     position: absolute;
     left: 45px;
-    top: 18px;
-    transform: translateY(-50%);
+    top: 6px;
     width: 25px;
     height: 25px;
     background-size: contain;
@@ -61,8 +71,7 @@
     background-color: #fff;
     position: absolute;
     left: 45px;
-    top: 18px;
-    transform: translateY(-50%);
+    top: 6px;
     width: 25px;
     height: 25px;
     background-size: contain;
