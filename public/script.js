@@ -113,6 +113,7 @@ function showAmountPrompt(type) {
 }
 
 
+
 function signOut() {
     // Sign out cleaning cookies and entire logic here.
     window.location.href = '/';
