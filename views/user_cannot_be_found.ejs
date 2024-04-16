@@ -3,23 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User cannot be found</title>
-    <link rel="stylesheet" href="/userNotFoundStyle.css" />
+    <title>User not Found</title>
+    <link rel="stylesheet" href="/userNotFound.css" />
   </head>
 
   <body>
+    <div id="backgroud"></div>
 
-    <div class="user-notfound-container">
+    <a href="/" class="menu-link">
+      <div class="menu-button">
+        <div></div>
+      </div>
+    </a>
 
-      <img src="public/images/Logo.png"/>
+    <div class="form-container">
+      <img src="public/images/Logo.png" />
+    </div>
 
-        <h2>This user could not be found.</h2>
+    <div class="error-space">
+      <p>
+        <span class="error-msg"> Error: </span>User not found.
+      </p>
+    </div>
 
-        <div class="back-container">
-          <p>Back to <a href="/login"> the home page.</a></p>
-        </div>
-    
-     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#backgroud",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x850707,
+        backgroundColor: 0x000000,
+      });
 
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".form-container").classList.add("show");
+        document.querySelector(".login-signup").classList.add("show");
+      });
+    </script>
   </body>
 </html>

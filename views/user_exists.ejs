@@ -4,15 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User already exists</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/userStyle.css" />
   </head>
 <body>
+
+  <div id="backgroud"></div>
     
-    <div class="user-exists-container">
-        <h1>Unfortunately</h1>
-        <h2>Username is already taken.</h2>
-        <p>Retry creating a <a href="/signup">new account here.</a></p>
+  <a href="/" class="menu-link">
+    <div class="menu-button">
+      <div></div>
     </div>
+  </a>
+
+  <div class="form-container">
+    <img src="public/images/Logo.png" />
+  </div>
+
+  <div class="error-space">
+    <p>
+      <span class="error-msg"> Error: </span>user already exist.
+    </p>
+  </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#backgroud",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x850707,
+        backgroundColor: 0x000000,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".form-container").classList.add("show");
+        document.querySelector(".login-signup").classList.add("show");
+      });
+    </script>
 </body>
 </html>
