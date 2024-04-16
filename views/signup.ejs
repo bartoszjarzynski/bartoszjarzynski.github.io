@@ -9,6 +9,8 @@
   
   <body>
 
+    <div id="backgroud"></div>
+
     <div class="form-container">  
       <img src="public/images/Logo.png"/>
 
@@ -53,6 +55,27 @@
       <p>Already have an account? <a href="/login">Log in</a></p>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#backgroud",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x31a121,
+        backgroundColor: 0x000000,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".form-container").classList.add("show");
+        document.querySelector(".login-signup").classList.add("show");
+      });
+    </script>
 
   </body>
 

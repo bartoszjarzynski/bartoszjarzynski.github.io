@@ -161,7 +161,7 @@
 
 /* Menu dash - animated button */
 .menu-link {
-  text-decoration: none; /* Remove underline from the anchor */
+  text-decoration: none;
 }
 
 .menu-link .menu-button {
