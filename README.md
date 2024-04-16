@@ -1,5 +1,4 @@
-![Logo](https://github.com/bartoszjarzynski/finance_monitoring/assets/72377404/c880e24d-1ea6-4fd5-a16a-6597849fe5ac =250x250)
-
+<img src="https://github.com/bartoszjarzynski/finance_monitoring/assets/72377404/c880e24d-1ea6-4fd5-a16a-6597849fe5ac" width=50% height=50%>
 This is a PWA app created in EJS, CSS and JS.
 
 As a database we have used MongoDB.
