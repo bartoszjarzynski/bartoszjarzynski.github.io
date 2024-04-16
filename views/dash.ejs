@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankPWA Dash</title>
+    <link rel="stylesheet" href="/dashStyle.css" />
+  </head>
+  <body>
+    <div id="backgroud"></div>
+
+    <div class="form-container">
+      <img src="public/images/Logo.png" />
+    </div>
+
+    <div id="login-signup" class="login-signup">
+      <div class="backgroud-space">
+        <p>Start managing your money</p>
+        <div class="button-container">
+          <button class="login-button">
+            <a href="/login">Click to log in</a>
+          </button>
+          <button class="signup-button">
+            <a href="/signup">Click to sign up</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-src">
+      <footer>
+        <p>
+          Copyright © 2024
+          <a href="https://github.com/bartoszjarzynski">Bartosz Jarzynski</a> &
+          <a href="https://github.com/">Kamil Kiwer.</a> All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#backgroud",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x31a121,
+        backgroundColor: 0x000000,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".form-container").classList.add("show");
+        document.querySelector(".login-signup").classList.add("show");
+      });
+    </script>
+  </body>
+</html>

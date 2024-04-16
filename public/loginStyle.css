@@ -1,105 +1,152 @@
 * {
-  animation: slideAndFadeIn 0.8s ease-in-out forwards;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
   font-family: sans-serif;
-  background-color: #fffae6;
 }
 
-@keyframes slideAndFadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-50px); /* Move elements up by 50px */
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0); /* Move elements back to their normal position */
-  }
+#backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
-  /* Login page main div */
-  .form-container {
-    max-width: 400px;
-    margin: 100px auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Logo */
-  .form-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: auto;
-  }
-  
-  /* Labels: username&password */
+/* Login page main div */
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.form-container.show {
+  opacity: 1;
+}
+
+.form-container h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+
+.form-container h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Logo */
+.form-container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: auto;
+}
+
+/* Labels: username&password */
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 /* Label fields */
 .form-group input[type="text"],
 .form-group input[type="password"] {
-    width: 75%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background-color: #fff;
-    text-indent: 30px;
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #fff;
+  text-indent: 30px;
 }
 
 /* Icon positioning */
 .input-with-icon {
-    position: relative;
+  position: relative;
 }
 
 .input-with-icon .input-icon-username {
-    background-image: url('/public/images/person_crop_circle.png');
-    background-color: #fff;
-    position: absolute;
-    left: 45px;
-    top: 6px;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url("/public/images/person_crop_circle.png");
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .input-with-icon .input-icon-password {
-    background-image: url('/public/images/lock_outline.png');
-    background-color: #fff;
-    position: absolute;
-    left: 45px;
-    top: 6px;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url("/public/images/lock_outline.png");
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-  
-  /* Label submit */
-  .container-submit-btn {
-    margin-top: 10px;
-    text-align: center;
+
+/* Label submit */
+.container-submit-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Submit button */
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #31a121;
+  color: #fffae6;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Submit button on hover */
+.submit-btn:hover {
+  animation: shake 0.5s ease infinite;
+  background-color: #0a2207;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Submit button */
-  .submit-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.5s;
+  25% {
+    transform: translateX(-5px);
   }
-  
-  /* Submit button on hover */
-  .submit-btn:hover {
-    background-color: #0056b3;
+  50% {
+    transform: translateX(5px);
   }
-  
-p {
-    margin-top: 100px;
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form-container p {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 100px;
+}
+
+.form-container a {
+  color: #31a121;
 }

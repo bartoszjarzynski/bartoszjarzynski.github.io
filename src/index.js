@@ -14,6 +14,10 @@ app.use('/public/', express.static('./public'));
 app.use(express.static("public"));
 
 app.get("/", (req,res) => {
+    res.render("dash");
+});
+
+app.get("/login", (req,res) => {
     res.render("login");
 });
 

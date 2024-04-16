@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  min-height: 100%;
+}
+
+#backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* Login page main div */
+.form-container {
+  max-width: 400px;
+  margin: 150px auto 0px auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.form-container.show {
+  opacity: 1;
+}
+
+/* Creators */
+
+.footer-src{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 300px;
+}
+
+.footer-src a {
+  text-decoration: none;
+}
+
+/* Logo */
+.form-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-signup {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.login-signup.show {
+    opacity: 1;
+  }
+
+/* Div login signup */
+.backgroud-space {
+  background-color: transparent;
+
+  padding: 20px;
+  height: 50px;
+  width: 400px;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  margin: 15px auto;
+  gap: 15px;
+  width: 200px;
+}
+
+.button-container a {
+  text-decoration: none;
+  color: #fffae6;
+}
+
+.login-button,
+.signup-button {
+  border: none;
+  background-color: #31a121;
+  color: #fffae6;
+  padding: 15px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  animation: shake 0.5s ease infinite;
+  background-color: #0a2207;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
