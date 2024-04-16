@@ -1,3 +1,5 @@
+![Logo](https://github.com/bartoszjarzynski/finance_monitoring/assets/72377404/c880e24d-1ea6-4fd5-a16a-6597849fe5ac)
+
 This is a PWA app created in EJS, CSS and JS.
 
 As a database we have used MongoDB.
