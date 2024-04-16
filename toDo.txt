@@ -1,0 +1,9 @@
+List of toDo things in this app:
+
+1. Reorganise a sign up page:
+    1.1. Add first name, last name
+            username, password, re-password.
+    1.2 Add logic for above content to sync with database.
+
+2. Create a dashboard:
+    2.1. Take an inspiration from: https://dribbble.com/shots/16636163-UI-Dashboard-animation

@@ -41,13 +41,14 @@
   align-items: center;
   text-align: center;
   padding: 5px;
-  color: #fff;
+  color: #31a121;
   text-decoration: none;
   margin-top: 200px;
 }
 
 .footer-src a {
   text-decoration: none;
+  color: #31a121;
 }
 
 /* Logo */

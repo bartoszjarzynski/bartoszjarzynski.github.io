@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: sans-serif;
+}
+
+
+#backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* Login page main div */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.form-container.show {
+  opacity: 1;
+}
+
+.form-container h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+
+.form-container h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Logo */
+.form-container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: auto;
+}
+
+/* Labels: username&password */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Label fields */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #fff;
+  text-indent: 30px;
+}
+
+/* Icon positioning */
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .input-icon-username {
+  background-image: url("/public/images/person_crop_circle.png");
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.input-with-icon .input-icon-password {
+  background-image: url("/public/images/lock_outline.png");
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Label submit */
+.container-submit-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Submit button */
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #31a121;
+  color: #fffae6;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Submit button on hover */
+.submit-btn:hover {
+  animation: shake 0.5s ease infinite;
+  background-color: #0a2207;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form-container p {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 100px;
+}
+
+.form-container a {
+  color: #31a121;
+}
+
+
+
+/* Menu dash - animated button */
+.menu-link {
+  text-decoration: none;
+}
+
+.menu-link .menu-button {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  transition: 0.5s;
+}
+
+.menu-button:before,
+.menu-button:after,
+.menu-button div {
+  background: #31a121;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+
+.menu-button:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.menu-button:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.menu-button:hover div {
+  transform: scale(0);
+}
+
+.menu-link:hover {
+  opacity: 1;
+  cursor: pointer;
+}
