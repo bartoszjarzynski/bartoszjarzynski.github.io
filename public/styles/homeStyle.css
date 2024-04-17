@@ -1,0 +1,198 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: sans-serif;
+  color: #000;
+}
+
+#backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+#menu-backgroud {
+  background-color: #171b27;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 80vw;
+  height: 90vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-logo img {
+    width: 20%;
+}
+
+#menu-left {
+}
+
+#menu-center {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 90vh;
+  height: 60vh;
+
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+#window-center-1 {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 12vw;
+  height: 15vh;
+
+  position: absolute;
+  top: 20%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+}
+
+#window-center-2 {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 12vw;
+  height: 15vh;
+
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+#window-center-3 {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 12vw;
+  height: 15vh;
+
+  position: absolute;
+  top: 20%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-right {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 35vh;
+  height: 50vh;
+
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-profile-right {
+  background-color: transparent;
+  text-indent: 25%;
+  font-size: 18px;
+  color: #fff;
+
+  width: 35vh;
+  height: 5vh;
+
+  margin: auto;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+
+  position: absolute;
+  top: 12%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-profile-right p {
+    color: #fff;
+}
+
+#menu-profile-right img {
+    width: 15%;
+}
+
+#window-right-helper {
+  background-color: #252d39;
+  border-radius: 40px;
+  opacity: 90%;
+
+  width: 35vh;
+  height: 20vh;
+
+  position: absolute;
+  top: 82%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+}
+
+.logout-btn {
+  margin: auto;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+
+  position: absolute;
+  top: -16%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+}
+
+.gg-log-out {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 16px;
+  border: 2px solid;
+  border-right: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  margin-left: 180px;
+  scale: 2;
+  color: #fff;
+  transition: color 0.5s ease; /* Added transition for smooth color change */
+}
+
+.gg-log-out:hover {
+  color: red;
+  animation: pulse-animation 2s infinite; /* Added pulse animation */
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px red;
+    opacity: 10%;
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0);
+  }
+}

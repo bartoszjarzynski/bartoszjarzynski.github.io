@@ -1,80 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BankPWA</title>
-    <link rel="stylesheet" href="public/styles/style.css" />
-
-    <!-- Pie Chart Generator -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankPWA - Account</title>
+    <link rel="stylesheet" href="public/styles/homeStyle.css" />
+  </head>
+  <body>
+    <div id="backgroud"></div>
+    <div id="menu-backgroud">
+      <div class="menu-logo">
+        <img src="public/images/LogoHorizontal.png">
+    </div>
+    </div>
     
-<main style="height: 90vh;">
-    <!-- Main dash of finance info -->
-    <div class="finance-info-dash">
-        <h1>Finanse monitoring</h1>
-        <h2>Manage your finances from the dashboard</h2>    
-        
-        <div style="margin-bottom: 50px;"></div>
-        
-        <!-- Current wallet -->
-        <div class="finance-info-current">
-            <h2>Your wallet</h2>
-            <h1 id="walletAmount">0$</h1> <!-- Display the wallet amount -->
-        </div>
 
-        <!-- Buttons for deposit, spendings, and limit -->
-        <button class="deposit-btn" onclick="showAmountPrompt('deposit')">Deposit</button>
-        <button class="spendings-btn" onclick="showAmountPrompt('spendings')">Spendings</button>
-        <button class="limit-btn" onclick="showAmountPrompt('limit')">Set a limit</button>
+    <div id="menu-left"></div>
+
+    <div id="menu-center"></div>
+
+    <div id="window-center-1"></div>
+    <div id="window-center-2"></div>
+    <div id="window-center-3"></div>
+
+    <div id="menu-profile-right">
+      <img src="public/images/person_crop_circle.png">
+      <p>Username</p>
+    </div>
+    
+    <div id="menu-right">
+      <a href="/" class="menu-link">
+        <div class="logout-btn">
+          <i class="gg-log-out"></i>
+        </div>
+      </a>
     </div>
 
-    <div style="margin-bottom: 75px;"></div>
+    <div id="window-right-helper"></div>
 
-    <!-- Finance report info dash -->
-    <div class="finance-report-dash">
-        
-        <!-- Deposit -->
-        <div class="info">
-            <h2>This month you have deposit</h2>
-            <h1 id="depositAmount">0$</h1> <!-- Display the deposit amount -->
-        </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#backgroud",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x31a121,
+        backgroundColor: 0x000000,
+      });
 
-        <!-- Spendings -->
-        <div class="info">
-            <h2>This month you have spent</h2>
-            <h1 id="spendingsAmount">0$</h1> <!-- Display the spendings amount -->
-        </div>
-    </div>
-
-    <!-- Display spending limit -->
-    <div id="spendingsLimitValue">Your spendings limit is 1000$</div>
-
-    <!-- Pie chart of the spendings and deposit -->
-    <canvas id="pieChart"></canvas>
-
-    <!-- Finance history -->
-    <div class="finance-history">
-        <div class="info" id="depositHistory">
-            <h3>Your deposit this month</h3>
-            <!-- Deposit history will be dynamically added here -->
-        </div>
-        <div class="info" id="spendingsHistory">
-            <h3>Your spendings this month</h3>
-            <!-- Spendings history will be dynamically added here -->
-        </div>
-    </div>
-
-    <!-- Sign out container -->
-    <div class="sign-out-container">
-        <button class="signout-btn" onclick="signOut('signOut')">Sign out</button>
-    </div>
-
-</main>
-
-<script src="script.js"></script>
-
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".form-container").classList.add("show");
+        document.querySelector(".login-signup").classList.add("show");
+      });
+    </script>
+  </body>
 </html>
+
