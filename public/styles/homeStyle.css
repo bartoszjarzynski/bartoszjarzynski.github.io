@@ -1,4 +1,5 @@
-@import url("https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css");
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css"); /* Sign out icon */
+@import url('https://fonts.cdnfonts.com/css/credit-card'); /* Credit card font */
 
 * {
   margin: 0;
@@ -13,7 +14,7 @@
 }
 
 #backgroud {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -29,7 +30,7 @@
   width: 80vw;
   height: 90vh;
 
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,74 +43,51 @@
 #menu-left {
 }
 
-#menu-center {
+#menu-center, #window-center-1, #window-center-2, #window-center-3, #menu-right, #menu-profile-right, #window-right-helper {
   background-color: #252d39;
   border-radius: 40px;
   opacity: 90%;
+  position: fixed;
+}
 
+#menu-center {
   width: 90vh;
   height: 60vh;
-
-  position: absolute;
-  top: 60%;
-  left: 48%;
+  top: 33%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 
 #window-center-1 {
-  background-color: #252d39;
-  border-radius: 40px;
-  opacity: 90%;
-
   width: 12vw;
   height: 15vh;
-
-  position: absolute;
-  top: 20%;
-  left: 33%;
+  top: 15%;
+  left: 26%;
   transform: translate(-50%, -50%);
 }
 
 #window-center-2 {
-  background-color: #252d39;
-  border-radius: 40px;
-  opacity: 90%;
-
   width: 12vw;
   height: 15vh;
-
-  position: absolute;
-  top: 20%;
-  left: 48%;
+  top: 15%;
+  left: 41%;
   transform: translate(-50%, -50%);
 }
 
 #window-center-3 {
-  background-color: #252d39;
-  border-radius: 40px;
-  opacity: 90%;
-
   width: 12vw;
   height: 15vh;
-
-  position: absolute;
-  top: 20%;
-  left: 63%;
+  top: 15%;
+  left: 55%;
   transform: translate(-50%, -50%);
 }
 
 #menu-right {
-  background-color: #252d39;
-  border-radius: 40px;
-  opacity: 90%;
-
   width: 35vh;
   height: 50vh;
-
-  position: absolute;
-  top: 45%;
-  right: 3%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  right: 12%;
+  transform: translate(50%, -50%);
 }
 
 #menu-profile-right {
@@ -127,10 +105,11 @@
   display: flex;
 
   position: absolute;
-  top: 12%;
-  right: 3%;
+  top: 9%;
+  right: 11%;
   transform: translate(-50%, -50%);
 }
+
 
 #menu-profile-right p {
     color: #fff;
@@ -141,16 +120,61 @@
 }
 
 #window-right-helper {
-  background-color: #252d39;
-  border-radius: 40px;
-  opacity: 90%;
-
   width: 35vh;
   height: 20vh;
+  top: 72%;
+  right: 12%;
+  transform: translate(0, 50%);
+}
+
+.credit-card {
+  height: 160px;
+  width: 253.76px;
+  background-color: gold;
+  border-radius: 25px;
+  top: 20%;
+  left: 10%;
+  position: fixed;
+}
+
+/* Card details */
+.balance-text, .balance-account, .card-username, .exp-date {
+  font-family: 'Credit Card', sans-serif;
+  position: absolute;
+}
+
+.balance-text {
+  top: 15%;
+  left: 10%;
+}
+.balance-account{
+  top: 35%;
+  left: 10%;
+}
+.card-username{
+  top: 75%;
+  left: 10%;
+}
+.exp-date{
+  top: 75%;
+  left: 65%;
+}
+
+.visa-logo img {
+  scale: 15%;
+  right: -80%;
+  position: absolute;
+}
+
+.logout-btn {
+  margin: auto;
+  justify-content: left;
+  align-items: center;
+  display: flex;
 
   position: absolute;
-  top: 82%;
-  right: 3%;
+  top: 11%;
+  right: 15%;
   transform: translate(-50%, -50%);
 }
 
@@ -161,8 +185,8 @@
   display: flex;
 
   position: absolute;
-  top: -16%;
-  right: -15%;
+  top: 12%;
+  right: 8%;
   transform: translate(-50%, -50%);
 }
 
@@ -184,7 +208,7 @@
 
 .gg-log-out:hover {
   color: red;
-  animation: pulse-animation 2s infinite; /* Added pulse animation */
+  animation: pulse-animation 2s forwards; /* Added pulse animation */
 }
 
 @keyframes pulse-animation {
@@ -194,5 +218,21 @@
   }
   100% {
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0);
+  }
+}
+
+/* Divs animation */
+#menu-center, #window-center-1, #window-center-2, #window-center-3, #menu-right, #menu-profile-right, #window-right-helper {
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

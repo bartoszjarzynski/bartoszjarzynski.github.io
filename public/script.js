@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
 // Get the canvas element
 // var ctx = document.getElementById("pieChart").getContext("2d");
 
