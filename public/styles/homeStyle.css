@@ -1,5 +1,5 @@
 @import url("https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css"); /* Sign out icon */
-@import url('https://fonts.cdnfonts.com/css/credit-card'); /* Credit card font */
+@import url("https://fonts.cdnfonts.com/css/credit-card"); /* Credit card font */
 
 * {
   margin: 0;
@@ -37,13 +37,19 @@
 }
 
 .menu-logo img {
-    width: 20%;
+  width: 20%;
 }
 
 #menu-left {
 }
 
-#menu-center, #window-center-1, #window-center-2, #window-center-3, #menu-right, #menu-profile-right, #window-right-helper {
+#menu-center,
+#window-center-1,
+#window-center-2,
+#window-center-3,
+#menu-right,
+#menu-profile-right,
+#window-right-helper {
   background-color: #252d39;
   border-radius: 40px;
   opacity: 90%;
@@ -82,6 +88,57 @@
   transform: translate(-50%, -50%);
 }
 
+.bitcoin {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.ethereum {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.binance {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#window-center-1 p.name,
+#window-center-2 p.name,
+#window-center-3 p.name {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 90px;
+  margin-left: 25px;
+}
+
+#window-center-1 p.index,
+#window-center-2 p.index,
+#window-center-3 p.index {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-left: 25px;
+  animation: slideInIndex 2s forwards;
+}
+
+@keyframes slideInIndex {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+}
+
 #menu-right {
   width: 35vh;
   height: 50vh;
@@ -105,18 +162,17 @@
   display: flex;
 
   position: absolute;
-  top: 9%;
+  top: 10%;
   right: 11%;
   transform: translate(-50%, -50%);
 }
 
-
 #menu-profile-right p {
-    color: #fff;
+  color: #fff;
 }
 
 #menu-profile-right img {
-    width: 15%;
+  width: 15%;
 }
 
 #window-right-helper {
@@ -138,24 +194,36 @@
 }
 
 /* Card details */
-.balance-text, .balance-account, .card-username, .exp-date {
-  font-family: 'Credit Card', sans-serif;
+.balance-text,
+.balance-account,
+.card-username,
+.exp-date {
+  font-family: "Credit Card", sans-serif;
   position: absolute;
+}
+
+.wallet-text {
+  color: #fff;
+  position: absolute;
+  top: 7%;
+  left: 31%;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .balance-text {
   top: 15%;
   left: 10%;
 }
-.balance-account{
+.balance-account {
   top: 35%;
   left: 10%;
 }
-.card-username{
+.card-username {
   top: 75%;
   left: 10%;
 }
-.exp-date{
+.exp-date {
   top: 75%;
   left: 65%;
 }
@@ -167,18 +235,8 @@
 }
 
 .logout-btn {
-  margin: auto;
-  justify-content: left;
-  align-items: center;
-  display: flex;
-
-  position: absolute;
-  top: 11%;
-  right: 15%;
-  transform: translate(-50%, -50%);
-}
-
-.logout-btn {
+  width: 25px;
+  height: 25px;
   margin: auto;
   justify-content: left;
   align-items: center;
@@ -186,7 +244,7 @@
 
   position: absolute;
   top: 12%;
-  right: 8%;
+  right: 12%;
   transform: translate(-50%, -50%);
 }
 
@@ -200,7 +258,6 @@
   border-right: 0;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  margin-left: 180px;
   scale: 2;
   color: #fff;
   transition: color 0.5s ease; /* Added transition for smooth color change */
@@ -222,7 +279,19 @@
 }
 
 /* Divs animation */
-#menu-center, #window-center-1, #window-center-2, #window-center-3, #menu-right, #menu-profile-right, #window-right-helper {
+#menu-center,
+#window-center-1,
+#window-center-2,
+#window-center-3,
+#menu-right,
+#menu-profile-right,
+#window-right-helper,
+.bitcoin,
+.binance,
+.ethereum,
+#window-center-1 p.name,
+#window-center-2 p.name,
+#window-center-3 p.name {
   animation: slideIn 2s forwards;
 }
 
