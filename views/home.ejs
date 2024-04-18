@@ -1,91 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BankPWA - Account</title>
-    <link rel="stylesheet" href="public/styles/homeStyle.css" />
-    <link href="https://fonts.cdnfonts.com/css/credit-card" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="backgroud"></div>
-    <div id="menu-backgroud">
-      <div class="menu-logo">
-        <img src="public/images/LogoHorizontal.png" id="github-link" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankPWA - Account</title>
+  <link rel="stylesheet" href="public/styles/homeStyle.css" />
+  <link href="https://fonts.cdnfonts.com/css/credit-card" rel="stylesheet" />
+</head>
+<body>
+  <div id="backgroud"></div>
+  <div id="menu-backgroud">
+    <div class="menu-logo">
+      <img src="public/images/LogoHorizontal.png" id="github-link" />
+    </div>
+  </div>
+
+  <div id="menu-left"></div>
+
+  <div id="menu-center"></div>
+
+  <div id="window-center-1">
+    <img class="bitcoin" src="public/images/bitcoin.png" />
+    <p class="name">Bitcoin</p>
+    <p class="index">BTC</p>
+    <p class="coin-price" id="bitcoin-price">$63,268.20</p> <!-- Placeholder for Bitcoin price -->
+  </div>
+  <div id="window-center-2">
+    <img class="ethereum" src="public/images/ethereum.png" />
+    <p class="name">Ethereum</p>
+    <p class="index">ETH</p>
+    <p class="coin-price" id="ethereum-price">$3,054.86</p> <!-- Placeholder for Ethereum price -->
+  </div>
+  <div id="window-center-3">
+    <img class="binance" src="public/images/binance.png" />
+    <p class="name">Binance</p>
+    <p class="index">BNB</p>
+    <p class="coin-price" id="binance-price">$549.04</p> <!-- Placeholder for Binance Coin price -->
+  </div>
+
+  <div id="menu-profile-right">
+    <img src="public/images/person_crop_circle.png" />
+    <p>Username</p>
+  </div>
+
+  <div class="sign-out-right">
+    <a href="/" class="menu-link">
+      <div class="logout-btn">
+        <i class="gg-log-out"></i>
       </div>
+    </a>
+  </div>
+
+  <div id="menu-right">
+    <p class="wallet-text">Online Wallet</p>
+
+    <div class="credit-card">
+      <p class="balance-text">BALANCE</p>
+      <p class="balance-account">$7,286.13</p>
+      <p class="card-username">KAMIL KIWER</p>
+      <p class="exp-date">03/29</p>
     </div>
 
-    <div id="menu-left"></div>
-
-    <div id="menu-center"></div>
-
-    <div id="window-center-1">
-      <img class="bitcoin" src="public/images/bitcoin.png" />
-      <p class="name">Bitcoin</p>
-      <p class="index">BTC</p>
+    <div class="visa-logo">
+      <img src="public/images/VISA.png" />
     </div>
-    <div id="window-center-2">
-      <img class="ethereum" src="public/images/ethereum.png" />
-      <p class="name">Ethereum</p>
-      <p class="index">ETH</p>
-    </div>
-    <div id="window-center-3">
-      <img class="binance" src="public/images/binance.png" />
-      <p class="name">Binance</p>
-      <p class="index">BNB</p>
-    </div>
+    
+  </div>
 
-    <div id="menu-profile-right">
-      <img src="public/images/person_crop_circle.png" />
-      <p>Username</p>
-    </div>
+  <div id="window-right-helper"></div>
 
-    <div class="sign-out-right">
-      <a href="/" class="menu-link">
-        <div class="logout-btn">
-          <i class="gg-log-out"></i>
-        </div>
-      </a>
-    </div>
-
-    <div id="menu-right">
-      <p class="wallet-text">Online Wallet</p>
-
-      <div class="credit-card">
-        <p class="balance-text">BALANCE</p>
-        <p class="balance-account">$7, 286.13</p>
-        <p class="card-username">KAMIL KIWER</p>
-        <p class="exp-date">03/29</p>
-      </div>
-
-      <div class="visa-logo">
-        <img src="public/images/VISA.png" />
-      </div>
-    </div>
-
-    <div id="window-right-helper"></div>
-
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
-    <script>
-      VANTA.NET({
-        el: "#backgroud",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x31a121,
-        backgroundColor: 0x000000,
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".form-container").classList.add("show");
-        document.querySelector(".login-signup").classList.add("show");
-      });
-    </script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+  <script src="public/script.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#backgroud",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x31a121,
+      backgroundColor: 0x000000,
+    });
+  </script>
+</body>
 </html>

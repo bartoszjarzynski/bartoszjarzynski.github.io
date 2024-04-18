@@ -4,6 +4,7 @@ const bcrypt= require("bcrypt");
 const collection = require("./config");
 const exp = require("constants");
 
+
 const app = express();
 app.use(express.json());
 
@@ -68,6 +69,7 @@ app.post("/login", async (req, res) => {
         res.send("Unaspected error: err -> Wrong details.");
     }
 });
+
 
 const port = 5000;
 app.listen(port, () => {

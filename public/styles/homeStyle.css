@@ -40,8 +40,8 @@
   width: 20%;
 }
 
-#menu-left {
-}
+/* #menu-left {
+} */
 
 #menu-center,
 #window-center-1,
@@ -50,7 +50,6 @@
 #menu-right,
 #menu-profile-right,
 #window-right-helper {
-  background-color: #252d39;
   border-radius: 40px;
   opacity: 90%;
   position: fixed;
@@ -62,6 +61,13 @@
   top: 33%;
   left: 25%;
   transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, rgba(37,45,57,1) 80%, rgba(33,43,59,1) 95%);
+}
+
+#window-center-1,
+#window-center-2,
+#window-center-3 {
+  background: linear-gradient(180deg, rgba(42,61,91,1) 0%, rgba(37,45,57,1) 60%);
 }
 
 #window-center-1 {
@@ -128,6 +134,16 @@
   animation: slideInIndex 2s forwards;
 }
 
+#window-center-1 p.coin-price,
+#window-center-2 p.coin-price,
+#window-center-3 p.coin-price {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: -35px;
+  margin-left: 120px;
+  font-size: 18px;
+}
+
 @keyframes slideInIndex {
   from {
     transform: translateY(100%);
@@ -145,6 +161,7 @@
   top: 20%;
   right: 12%;
   transform: translate(50%, -50%);
+  background: linear-gradient(180deg, rgba(42,61,91,1) 0%, rgba(37,45,57,1) 15%);
 }
 
 #menu-profile-right {
@@ -181,12 +198,13 @@
   top: 72%;
   right: 12%;
   transform: translate(0, 50%);
+  background: linear-gradient(180deg, rgba(37,45,57,1) 70%, rgba(33,43,59,1) 95%);
 }
 
 .credit-card {
   height: 160px;
   width: 253.76px;
-  background-color: gold;
+  background: linear-gradient(90deg, rgba(199,168,0,1) 0%, rgba(191,161,0,1) 22%, rgba(255,215,0,1) 100%);
   border-radius: 25px;
   top: 20%;
   left: 10%;
