@@ -9,10 +9,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // Crypto API
+async function fetchingCrypto() {
+  var request = new XMLHttpRequest();
+  var API = "4957b1fa-eef0-498b-a31e-3673622cd97a";
+  request.open(
+    "GET",
+    `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=${API}`
+  );
+  request.onload = function () {
+    request.send();
 
-
+    var data = JSON.parse(this.response);
+    if (request.status >= 200 && request.status < 400) {
+      data.forEach((results) => {
+        console.log(data.data.name.quote.USD.price.results);
+      });
+    } else {
+      console.log("error");
+    }
+  };
+}
 
 // Get the canvas element
 // var ctx = document.getElementById("pieChart").getContext("2d");
