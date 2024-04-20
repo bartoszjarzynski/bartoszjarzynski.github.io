@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 // Crypto API
 async function fetchingCrypto() {
   var request = new XMLHttpRequest();
