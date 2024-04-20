@@ -137,6 +137,18 @@
   background-repeat: no-repeat;
 }
 
+.input-with-icon .input-icon-mail {
+  background-image: url("/public/images/mail_outline.png");
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /* Label submit */
 .container-submit-btn {
   margin-top: 20px;
@@ -182,7 +194,7 @@
   font-weight: bold;
   font-size: 16px;
   color: #fff;
-  margin-top: 100px;
+  margin-top: 40px
 }
 
 .form-container a {
