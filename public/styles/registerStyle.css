@@ -74,7 +74,7 @@
 .form-group-names {
   width: 35%;
   padding: 10px;
-  margin-top: 10px  ;
+  margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -83,6 +83,11 @@
   vertical-align: middle;
   text-indent: 30px;
   }
+
+.form-group-names input[id="firstname"],
+.form-group-names input[id="surname"] {
+  width: 75%;
+}
 
 /* Icon positioning */
 .input-with-icon {

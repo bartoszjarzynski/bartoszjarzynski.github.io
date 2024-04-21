@@ -1,77 +1,101 @@
 const express = require("express");
 const path = require("path");
-const bcrypt= require("bcrypt");
+const bcrypt = require("bcrypt");
 const collection = require("./config");
 const exp = require("constants");
-
 
 const app = express();
 app.use(express.json());
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
-app.set('view engine', 'ejs');
-app.use('/public/', express.static('./public'));
+app.set("view engine", "ejs");
+app.use("/public/", express.static("./public"));
 app.use(express.static("public"));
 
-app.get("/", (req,res) => {
-    res.render("dash");
+app.get("/", (req, res) => {
+  res.render("dash");
 });
 
-app.get("/login", (req,res) => {
-    res.render("login");
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
-app.get("/signup", (req,res) => {
-    res.render("signup");
+app.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 // Register user
 
-app.post("/signup", async (req,res) => {
-    const data = {
-        name: req.body.username,
-        password: req.body.password
+app.post("/signup", async (req, res) => {
+  const data = {
+    firstname: req.body.firstname,
+    surname: req.body.surname,
+    name: req.body.username,
+    mail: req.body.mail,
+    password: req.body.password,
+  };
+
+  // If user exists in the database validation
+  const existingUser = await collection.findOne({ name: data.name });
+  if (existingUser) {
+    res.render("user_exists");
+  } else {
+    // Mail validation if contains "@"
+    if (!data.mail || !data.mail.includes("@")) {
+      res.render("signup");
+      return;
     }
 
-    const existingUser = await collection.findOne({name: data.name});
-    if (existingUser) {
-        res.render("user_exists");
-    } else {
-        // Hashing password
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(data.password, saltRounds);
+    // Check if mail contains a valid domain
+    const validDomains = ["com", "pl", "eu", "net", "org"]; // Can get more domains in the future
+    const domain = data.mail.split("@")[1]; // Get domain part of email
+    const domainParts = domain.split(".");
+    if (!validDomains.includes(domainParts[domainParts.length - 1])) {
+      res.render("signup");
+      return;
+    }
 
-        data.password = hashedPassword;
+    // Password validation if psw is longer than 8 chars
+    if (data.password.length <= 8) {
+      res.render("signup");
+      return;
+    }
 
-        const userdata = await collection.insertMany(data);
-        console.log(userdata);
+    // Hashing password
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(data.password, saltRounds);
+    data.password = hashedPassword;
 
-        res.render("home", {username: data.name, password: data.password});
-    } 
+    const userdata = await collection.insertMany(data);
+    console.log(userdata);
+
+    res.render("home", { username: data.name, password: data.password });
+  }
 });
-
 
 app.post("/login", async (req, res) => {
-    try {
-        const check = await collection.findOne({ name: req.body.username });
-        if (!check) {
-            res.render("user_cannot_be_found");
-        } else {
-            const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
-            if (isPasswordMatch) {
-                res.render("home");
-            } else {
-                res.render("wrong_password");
-            }
-        }
-    } catch {
-        res.send("Unaspected error: err -> Wrong details.");
+  try {
+    const check = await collection.findOne({ name: req.body.username });
+    if (!check) {
+      res.render("user_cannot_be_found");
+    } else {
+      const isPasswordMatch = await bcrypt.compare(
+        req.body.password,
+        check.password
+      );
+      if (isPasswordMatch) {
+        res.render("home");
+      } else {
+        res.render("wrong_password");
+      }
     }
+  } catch {
+    res.send("Unaspected error: err -> Wrong details.");
+  }
 });
-
 
 const port = 5000;
 app.listen(port, () => {
-    console.log(`Server running. Reach at http://localhost:${port}`);
+  console.log(`Server running. Reach at http://localhost:${port}`);
 });

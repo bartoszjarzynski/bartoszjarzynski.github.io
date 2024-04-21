@@ -1,22 +1,35 @@
 const mongoose = require("mongoose");
 const connect = mongoose.connect("mongodb://localhost:27017/Login");
 
-connect.then(() => {
+connect
+  .then(() => {
     console.log("Database connected successfully");
-})
-.catch(() => {
+  })
+  .catch(() => {
     console.log("Cannot be connected");
-});
+  });
 
 const LoginSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
+  firstname: {
+    type: String,
+    required: true,
+  },
+  surname: {
+    type: String,
+    required: true,
+  },
+  mail: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  }
 });
 
 const collection = new mongoose.model("users", LoginSchema);
