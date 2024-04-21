@@ -57,7 +57,7 @@ app.post("/signup", async (req, res) => {
     }
 
     // Password validation if psw is longer than 8 chars
-    if (data.password.length <= 8) {
+    if (data.password.length < 7) {
       res.render("signup");
       return;
     }
@@ -85,7 +85,7 @@ app.post("/login", async (req, res) => {
         check.password
       );
       if (isPasswordMatch) {
-        res.render("home");
+        res.render("home", { username: req.body.username, firstname: check.firstname, surname: check.surname });
       } else {
         res.render("wrong_password");
       }

@@ -49,7 +49,8 @@
 #window-center-3,
 #menu-right,
 #menu-profile-right,
-#window-right-helper {
+#window-right-helper,
+#window-right-helper2 {
   border-radius: 40px;
   opacity: 90%;
   position: fixed;
@@ -196,6 +197,10 @@
   transform: translate(-50%, -50%);
 }
 
+#username-display {
+  color: #fff;
+}
+
 #menu-profile-right p {
   color: #fff;
 }
@@ -204,8 +209,8 @@
   width: 15%;
 }
 
-#window-right-helper {
-  width: 35vh;
+#window-right-helper{
+  width: 17vh;
   height: 20vh;
   top: 72%;
   right: 12%;
@@ -215,6 +220,41 @@
     rgba(37, 45, 57, 1) 70%,
     rgba(33, 43, 59, 1) 95%
   );
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#window-right-helper2{
+  width: 17vh;
+  height: 20vh;
+  top: 72%;
+  right: 21%;
+  transform: translate(0, 50%);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 45, 57, 1) 70%,
+    rgba(33, 43, 59, 1) 95%
+  );
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#window-right-helper p ,#window-right-helper2 p{
+  margin-top: 10px;
+}
+
+#window-right-helper p.sidetext, #window-right-helper2 p.sidetext2 {
+  color: white;
+}
+
+#window-right-helper p.amount-wit {
+  color: #b20000;
+}
+
+#window-right-helper2 p.amount-wit2 {
+  color: rgb(22, 221, 22);
 }
 
 .credit-card {
@@ -262,6 +302,10 @@
   top: 75%;
   left: 10%;
 }
+#card-member-display {
+  color: #000;
+  font-weight: bold;
+}
 .exp-date {
   top: 75%;
   left: 65%;
@@ -269,7 +313,7 @@
 
 .visa-logo img {
   scale: 15%;
-  right: -70%;
+  right: -80%;
   position: absolute;
 }
 
@@ -292,6 +336,9 @@
 }
 
 .amount-enter input {
+  left: -32px;
+  position: absolute;
+  width: 142px;
   font-weight: bold;
   font-size: 16px;
   color: #fff;
@@ -514,6 +561,7 @@
 #menu-right,
 #menu-profile-right,
 #window-right-helper,
+#window-right-helper2,
 .bitcoin,
 .binance,
 .ethereum,
@@ -539,34 +587,24 @@
 /* CHART CENTER MAIN HOME */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	font-family: "Roboto", sans-serif;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	backgroud-color: #252d39;
-	justify-content: center;
-}
-
 .main-container {
 	background: transparent;
 	color: #abafc6;
 	border-radius: 5px;
 	padding: 20px;
-	width: 650px;
-	height: 350px;
+	width: 100%;
+	height: 100%;
 }
 
 .year-stats {
 	white-space: nowrap;
 	max-height: 170px;
+  margin-top: 75px;
 	overflow: hidden;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .year-stats:hover {
@@ -618,6 +656,7 @@ body {
 .month-group:hover p,
 .selected p {
 	color: #fff;
+  font-weight: bold;
 }
 
 .h-25 {
@@ -647,8 +686,8 @@ body {
 
 .percent {
 	display: block;
-	width: 120px;
-	height: 120px;
+	width: 240px;
+	height: 240px;
 }
 
 .circle {
@@ -674,15 +713,18 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 12px;
+	font-size: 24px;
 	color: #fff;
 	text-align: center;
 }
 
 .info p {
 	margin-bottom: 10px;
+  font-size: 22px;
+  color: #ccc;
 }
 
 .info span {
 	color: #fff;
+  font-size: 18px;
 }

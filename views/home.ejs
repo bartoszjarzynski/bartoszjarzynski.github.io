@@ -21,57 +21,7 @@
 
       <body>
         <div class="main-container">
-          <div class="year-stats">
-            <div class="month-group">
-              <div class="bar h-100"></div>
-              <p class="month">Jan</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">Feb</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-75"></div>
-              <p class="month">Mar</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Apr</p>
-            </div>
-            <div class="month-group selected">
-              <div class="bar h-100"></div>
-              <p class="month">May</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">Jun</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-75"></div>
-              <p class="month">Jul</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Aug</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">Sep</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-75"></div>
-              <p class="month">Oct</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Nov</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-100"></div>
-              <p class="month">Dez</p>
-            </div>
-          </div>
-      
+
           <div class="stats-info">
             <div class="graph-container">
               <div class="percent">
@@ -99,6 +49,58 @@
               <p>Bonus payments <span>$92</span></p>
             </div>
           </div>
+
+          <div class="year-stats">
+            <div class="month-group">
+              <div class="bar h-100"></div>
+              <p class="month">Jan</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-50"></div>
+              <p class="month">Feb</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-25"></div>
+              <p class="month">Mar</p>
+            </div>
+            <div class="month-group selected">
+              <div class="bar h-75"></div>
+              <p class="month">Apr</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-50"></div>
+              <p class="month">May</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-25"></div>
+              <p class="month">Jun</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-75"></div>
+              <p class="month">Jul</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-25"></div>
+              <p class="month">Aug</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-50"></div>
+              <p class="month">Sep</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-75"></div>
+              <p class="month">Oct</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-25"></div>
+              <p class="month">Nov</p>
+            </div>
+            <div class="month-group">
+              <div class="bar h-100"></div>
+              <p class="month">Dec</p>
+            </div>
+          </div>
+      
         </div>
       </body>
 
@@ -128,7 +130,7 @@
 
     <div id="menu-profile-right">
       <img src="public/images/person_crop_circle.png" />
-      <p>Username</p>
+      <p><span id="username-display"></span></p>
     </div>
 
     <div class="sign-out-right">
@@ -145,7 +147,7 @@
       <div class="credit-card">
         <p class="balance-text">BALANCE</p>
         <p class="balance-account">$7,286.13</p>
-        <p class="card-username">KAMIL KIWER</p>
+        <p class="card-username"><span id="card-member-display"></span></p>
         <p class="exp-date">03/29</p>
       </div>
 
@@ -172,7 +174,20 @@
       </div>
     </div>
 
-    <div id="window-right-helper"></div>
+    <div id="window-right-helper">
+        <p class="sidetext">WITHDRAWS</p>
+        <p class="amount-wit">- $2005</p>
+        <p class="amount-wit">- $1600</p>
+        <p class="amount-wit">- $2011</p>
+    </div>
+
+    <div id="window-right-helper2">
+        <p class="sidetext2">DEPOSITS</p>
+        <p class="amount-wit2">+ $1800</p>
+        <p class="amount-wit2">+ $9000</p>
+        <p class="amount-wit2">+ $2200</p>
+        <p class="amount-wit2">+ $8000</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
@@ -190,6 +205,10 @@
         color: 0x31a121,
         backgroundColor: 0x000000,
       });
+
+      var username = "<%= username %>";
+      var firstname = "<%= firstname %>";
+      var surname = "<%= surname %>";
     </script>
   </body>
 </html>
