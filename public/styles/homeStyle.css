@@ -49,8 +49,8 @@
 #window-center-3,
 #menu-right,
 #menu-profile-right,
-#window-right-helper,
-#window-right-helper2 {
+#window-withdraws,
+#window-deposits {
   border-radius: 40px;
   opacity: 90%;
   position: fixed;
@@ -209,51 +209,59 @@
   width: 15%;
 }
 
-#window-right-helper{
+#window-withdraws{
   width: 17vh;
   height: 20vh;
   top: 72%;
-  right: 12%;
+  right: 11%;
+
+  margin: auto;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+
   transform: translate(0, 50%);
   background: linear-gradient(
     180deg,
     rgba(37, 45, 57, 1) 70%,
     rgba(33, 43, 59, 1) 95%
   );
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
 }
 
-#window-right-helper2{
+#window-deposits{
   width: 17vh;
   height: 20vh;
   top: 72%;
   right: 21%;
+
+  margin: auto;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+
   transform: translate(0, 50%);
   background: linear-gradient(
     180deg,
     rgba(37, 45, 57, 1) 70%,
     rgba(33, 43, 59, 1) 95%
   );
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
 }
 
-#window-right-helper p ,#window-right-helper2 p{
+#window-withdraws p ,#window-deposits p{
   margin-top: 10px;
 }
 
-#window-right-helper p.sidetext, #window-right-helper2 p.sidetext2 {
+#window-withdraws p.sidetext, #window-deposits p.sidetext2 {
   color: white;
 }
 
-#window-right-helper p.amount-wit {
+#window-withdraws p.amount-wit {
   color: #b20000;
 }
 
-#window-right-helper2 p.amount-wit2 {
+#window-deposits p.amount-wit2 {
   color: rgb(22, 221, 22);
 }
 
@@ -560,8 +568,8 @@
 #window-center-3,
 #menu-right,
 #menu-profile-right,
-#window-right-helper,
-#window-right-helper2,
+#window-withdraws,
+#window-deposits,
 .bitcoin,
 .binance,
 .ethereum,
