@@ -235,6 +235,16 @@
   font-size: 18px;
 }
 
+#window-center-1 p.coin-change,
+#window-center-2 p.coin-change,
+#window-center-3 p.coin-change {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: -70px;
+  margin-left: 140px;
+  font-size: 20px;
+}
+
 @keyframes slideInIndex {
   from {
     transform: translateY(100%);
@@ -554,9 +564,8 @@
 
 
 
-/* CHART CENTER MAIN HOME */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
+/* CHART PIE HERE */
 .main-container {
 	background: transparent;
 	color: #abafc6;
