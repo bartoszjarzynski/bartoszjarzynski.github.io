@@ -70,7 +70,12 @@ app.post("/signup", async (req, res) => {
     const userdata = await collection.insertMany(data);
     console.log(userdata);
 
-    res.render("home", { username: data.name, password: data.password });
+    res.render("home", { 
+      username: data.name, 
+      firstname: data.firstname, 
+      surname: data.surname,
+      password: data.password
+    });
   }
 });
 
@@ -85,7 +90,9 @@ app.post("/login", async (req, res) => {
         check.password
       );
       if (isPasswordMatch) {
-        res.render("home", { username: req.body.username });
+        res.render("home", {
+          username: req.body.username
+        });
       } else {
         res.render("wrong_password");
       }
