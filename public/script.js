@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Firstname and surname display at the card
-document.addEventListener("DOMContentLoaded", function () {
-  var span = document.getElementById("card-member-display");
-  var capitalizedFirstName = firstname.toUpperCase();
-  var capitalizedSurname = surname.toUpperCase();
-  span.textContent = `${capitalizedFirstName} ${capitalizedSurname}`;
-  span.style.fontFamily = "Credit Card";
-  span.style.fontWeight = "400";
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   var span = document.getElementById("card-member-display");
+//   var capitalizedFirstName = firstname.toUpperCase();
+//   var capitalizedSurname = surname.toUpperCase();
+//   span.textContent = `${capitalizedFirstName} ${capitalizedSurname}`;
+//   span.style.fontFamily = "Credit Card";
+//   span.style.fontWeight = "400";
+// });
 
 
 

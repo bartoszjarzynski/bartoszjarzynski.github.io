@@ -85,11 +85,7 @@ app.post("/login", async (req, res) => {
         check.password
       );
       if (isPasswordMatch) {
-        res.render("home", {
-          username: req.body.username,
-          firstname: check.firstname,
-          surname: check.surname
-        });
+        res.render("home", { username: req.body.username });
       } else {
         res.render("wrong_password");
       }
