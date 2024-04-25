@@ -15,7 +15,52 @@
       </div>
     </div>
 
-    <div id="menu-left"></div>
+    <div id="menu-left">
+      <div class="shortcuts">
+        
+        <div class="shortcut">
+          <div class="icon">
+            <img src="images/chart_bar_circle_fill.png">
+          </div>
+          <button class="market-shortcut" id="market-link">Market</button>
+        </div>
+    
+        <div class="shortcut-dashboard">
+          <div class="icon">
+            <img src="images/dashboard.png">
+          </div>
+          <button class="dashboard-shortcut">Dashboard</button>
+        </div>
+        
+        <div class="shortcut">
+          <div class="icon">
+            <img src="images/envelope_badge_fill.png">
+          </div>
+          <button class="news-shortcut" id="news-link">News</button>
+        </div>
+        
+        <div class="shortcut">
+          <div class="icon">
+            <img src="images/binance_menu.png">
+          </div>
+          <button class="binance-shortcut" id="binance-link">Binance</button>
+        </div>
+        
+        <div class="shortcut">
+          <div class="icon">
+            <img src="images/logo_twitter.png">
+          </div>
+          <button class="twitter-shortcut" id="twitter-link">Twitter</button>
+        </div>
+
+        <div class="buy-coffee">
+          <img src="images/buymeacoffee.png" id="coffee-link">
+        </div>
+      </div>
+    </div>
+    
+    
+
 
     <div id="menu-center">
       <body>
@@ -208,7 +253,23 @@
         <p class="text-transactions-all">All</p>
       </div>
 
-      <div class="transaction-number-1"></div>
+      <div class="transactions">
+        <div class="transaction-number-1">
+          <img src="images/money_dollar_circle.png">
+          <div class="transaction-text">
+            <p class="transaction-title">Sell</p>
+            <p class="transaction-amount">- $149.95</p>
+          </div>
+        </div>
+
+        <div class="transaction-number-2">
+          <img src="images/money_dollar_circle.png">
+          <div class="transaction-text">
+            <p class="transaction-title">Buy</p>
+            <p class="transaction-amount">+ $74.10</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -231,6 +292,8 @@
       var username = "<%= username %>";
       var firstname = "<%= firstname %>";
       var surname = "<%= surname %>";
+
+      
     </script>
   </body>
 </html>

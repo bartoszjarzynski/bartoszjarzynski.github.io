@@ -39,21 +39,81 @@
 
 .menu-logo img {
   width: 20%;
+  cursor: pointer;
 }
-
-/* #menu-left {
-} */
 
 #menu-center,
 #window-center-1,
 #window-center-2,
 #window-center-3,
 #menu-right,
+#menu-left,
 #menu-profile-right,
 #menu-recent-transactions {
   border-radius: 40px;
   opacity: 90%;
   position: fixed;
+}
+
+#menu-left {
+  width: 25vh;
+  height: 50vh;
+  transform: translate(50%, -50%);
+  left: 12%;
+  top: 25%;
+}
+
+.shortcuts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.shortcut, .shortcut-dashboard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 180px;
+  height: 60px;
+}
+
+.shortcut-dashboard {
+  border: #bfa100 1px solid;
+  border-radius: 15px;
+  background-color: #252d39;
+}
+
+.shortcut-dashboard button {
+  margin-left: 20px;
+}
+
+.shortcut .icon {
+  margin-right: 20px;
+}
+
+.shortcuts img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.shortcuts button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.buy-coffee {
+  margin-top: 150px;
+}
+
+.buy-coffee img {
+  width: 140px;
+  cursor: pointer;
 }
 
 #menu-center {
@@ -209,38 +269,6 @@
   width: 15%;
 }
 
-#menu-recent-transactions {
-  width: 35vh;
-  height: 20vh;
-  top: 73%;
-  right: 12%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    180deg,
-    rgba(37, 45, 57, 1) 80%,
-    rgba(33, 43, 59, 1) 95%
-  );
-}
-
-.form-container-transactions {
-  margin: 30px 0 0 30px;
-}
-
-.form-container-transactions p {
-  display: inline;
-}
-
-.form-container-transactions p.text-recent-transactions {
-  color: #ccc;
-  font-weight: bold;
-}
-
-.form-container-transactions p.text-transactions-all {
-  color: #ccc;
-  margin-left: 80px;
-  cursor: pointer;
-}
-
 .credit-card {
   height: 160px;
   width: 253.76px;
@@ -353,14 +381,75 @@
   width: 253.76px;
   background: linear-gradient(
     90deg,
-    rgba(199, 168, 0, 1) 0%,
-    rgba(191, 161, 0, 1) 22%,
-    rgba(255, 215, 0, 1) 100%
+    #c7a800 0%,
+    #bfa100 22%,
+    #ffd700 100%
   );
   border-radius: 25px;
   margin: auto;
   margin-left: 35px;
   margin-top: 7%;
+}
+
+#menu-recent-transactions {
+  width: 35vh;
+  height: 20vh;
+  top: 73%;
+  right: 12%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 45, 57, 1) 80%,
+    rgba(33, 43, 59, 1) 95%
+  );
+}
+
+.form-container-transactions {
+  margin: 30px 0 0 30px;
+}
+
+.form-container-transactions p {
+  display: inline;
+  color: #ccc;
+}
+
+.form-container-transactions p.text-recent-transactions {
+  font-weight: bold;
+}
+
+.form-container-transactions p.text-transactions-all {
+  margin-left: 80px;
+  cursor: pointer;
+}
+
+.transactions {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-number-1,
+.transaction-number-2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.transactions img {
+  width: 40px;
+}
+
+.transaction-text {
+  margin-left: 50px;
+}
+
+.transaction-text p {
+  display: inline;
+  color: #ccc;
+}
+
+.transactions p.transaction-amount {
+  margin-left: 80px;
 }
 
 .logout-btn {
@@ -412,6 +501,7 @@
 #window-center-1,
 #window-center-2,
 #window-center-3,
+#menu-left,
 #menu-right,
 #menu-profile-right,
 #menu-recent-transactions,
