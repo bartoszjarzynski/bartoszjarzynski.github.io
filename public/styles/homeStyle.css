@@ -70,7 +70,7 @@
   flex-direction: column;
   text-align: center;
   margin: auto;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .shortcut, .shortcut-dashboard {
@@ -105,6 +105,28 @@
   margin-bottom: 30px;
   cursor: pointer;
   color: #ccc;
+}
+
+.shortcuts button:hover {
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .buy-coffee {
@@ -389,6 +411,11 @@
   margin: auto;
   margin-left: 35px;
   margin-top: 7%;
+  transition: 0.5s;
+}
+
+.exchange:hover {
+  color: #ccc;
 }
 
 #menu-recent-transactions {
