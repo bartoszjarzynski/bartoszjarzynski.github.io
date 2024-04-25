@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var span = document.getElementById("card-member-display");
   var capitalizedFirstName = firstname.toUpperCase();
-  var capitalizedSurname = firstname.toUpperCase();
+  var capitalizedSurname = surname.toUpperCase();
   span.textContent = `${capitalizedFirstName} ${capitalizedSurname}`;
   span.style.fontFamily = "Credit Card";
   span.style.fontWeight = "400";
