@@ -1,5 +1,6 @@
 @import url("https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css"); /* Sign out icon */
 @import url("https://fonts.cdnfonts.com/css/credit-card"); /* Credit card font */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400"); /* Border effect */
 
 * {
   margin: 0;
@@ -49,8 +50,7 @@
 #window-center-3,
 #menu-right,
 #menu-profile-right,
-#window-withdraws,
-#window-deposits {
+#menu-recent-transactions {
   border-radius: 40px;
   opacity: 90%;
   position: fixed;
@@ -209,60 +209,36 @@
   width: 15%;
 }
 
-#window-withdraws{
-  width: 17vh;
+#menu-recent-transactions {
+  width: 35vh;
   height: 20vh;
-  top: 72%;
-  right: 11%;
-
-  margin: auto;
-
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-
-  transform: translate(0, 50%);
+  top: 73%;
+  right: 12%;
+  transform: translate(-50%, -50%);
   background: linear-gradient(
     180deg,
-    rgba(37, 45, 57, 1) 70%,
+    rgba(37, 45, 57, 1) 80%,
     rgba(33, 43, 59, 1) 95%
   );
 }
 
-#window-deposits{
-  width: 17vh;
-  height: 20vh;
-  top: 72%;
-  right: 21%;
+.form-container-transactions {
+  margin: 30px 0 0 30px;
+}
 
-  margin: auto;
+.form-container-transactions p {
+  display: inline;
+}
 
-  text-align: center;
+.form-container-transactions p.text-recent-transactions {
+  color: #ccc;
   font-weight: bold;
-  font-size: 20px;
-
-  transform: translate(0, 50%);
-  background: linear-gradient(
-    180deg,
-    rgba(37, 45, 57, 1) 70%,
-    rgba(33, 43, 59, 1) 95%
-  );
 }
 
-#window-withdraws p ,#window-deposits p{
-  margin-top: 10px;
-}
-
-#window-withdraws p.sidetext, #window-deposits p.sidetext2 {
-  color: white;
-}
-
-#window-withdraws p.amount-wit {
-  color: #b20000;
-}
-
-#window-deposits p.amount-wit2 {
-  color: rgb(22, 221, 22);
+.form-container-transactions p.text-transactions-all {
+  color: #ccc;
+  margin-left: 80px;
+  cursor: pointer;
 }
 
 .credit-card {
@@ -325,196 +301,66 @@
   position: absolute;
 }
 
+.amount-enter p.sell-text {
+  color: #ccc;
+  font-family: sans-serif;
+  margin-left: 35px;
+}
+
+.amount-enter p.USD-text {
+  color: #ccc;
+  font-family: sans-serif;
+  margin-right: 35px;
+  font-weight: bold;
+}
+
 .amount-enter {
-  position: absolute;
   margin: auto;
-  margin-bottom: 10px;
+  margin-top: 75%;
+  margin-bottom: -8%;
   
-  height: 30px;
-  width: 150px;
-  top: 300px;
-  left: 125px;
+  height: 10vh;
+  width: auto;
   
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   border: 0px;
   background-color: transparent;
 }
 
 .amount-enter input {
-  left: -32px;
-  position: absolute;
-  width: 142px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #fff;
-}
-
-.deposit-btn {
-  position: absolute;
-  height: 30px;
-  width: 150px;
-  top: 350px;
-  left: 90px;
-  background-color: #004a7f;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  width: 110px;
   margin: auto;
   font-weight: bold;
   font-size: 16px;
   color: #fff;
-  -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
-}
-@-webkit-keyframes glowing {
-  0% {
-    background-color: #31a121;
-    -webkit-box-shadow: 0 0 3px #31a121;
-  }
-  50% {
-    background-color: #01ff09;
-    -webkit-box-shadow: 0 0 40px #01ff09;
-  }
-  100% {
-    background-color: #31a121;
-    -webkit-box-shadow: 0 0 3px #31a121;
-  }
 }
 
-@-moz-keyframes glowing {
-  0% {
-    background-color: #31a121;
-    -moz-box-shadow: 0 0 3px #31a121;
-  }
-  50% {
-    background-color: #01ff09;
-    -moz-box-shadow: 0 0 40px #01ff09;
-  }
-  100% {
-    background-color: #31a121;
-    -moz-box-shadow: 0 0 3px #31a121;
-  }
+.horizontal-line {
+  width: 250px;
+  height: 2px;
+  margin-left: 35px;
+  background-color: #ccc;
 }
 
-@-o-keyframes glowing {
-  0% {
-    background-color: #31a121;
-    box-shadow: 0 0 3px #31a121;
-  }
-  50% {
-    background-color: #01ff09;
-    box-shadow: 0 0 40px #01ff09;
-  }
-  100% {
-    background-color: #31a121;
-    box-shadow: 0 0 3px #31a121;
-  }
-}
-
-@keyframes glowing {
-  0% {
-    background-color: #31a121;
-    box-shadow: 0 0 3px #31a121;
-  }
-  50% {
-    background-color: #01ff09;
-    box-shadow: 0 0 40px #01ff09;
-  }
-  100% {
-    background-color: #31a121;
-    box-shadow: 0 0 3px #31a121;
-  }
-}
-
-.withdraw-btn {
-  position: absolute;
-  height: 30px;
-  width: 150px;
-  top: 400px;
-  left: 90px;
-  background-color: #ff1101;
-  border: none;
-  border-radius: 15px;
+.exchange {
   cursor: pointer;
-  text-align: center;
-  display: flex;
+  height: 40px;
+  width: 253.76px;
+  background: linear-gradient(
+    90deg,
+    rgba(199, 168, 0, 1) 0%,
+    rgba(191, 161, 0, 1) 22%,
+    rgba(255, 215, 0, 1) 100%
+  );
+  border-radius: 25px;
   margin: auto;
-  font-weight: bold;
-  justify-content: center;
-  font-size: 16px;
-  color: #fff;
-  font-family: sans-serif;
-  -webkit-animation: glowingred 1500ms infinite;
-  -moz-animation: glowingred 1500ms infinite;
-  -o-animation: glowingred 1500ms infinite;
-  animation: glowingred 1500ms infinite;
-}
-@-webkit-keyframes glowingred {
-  0% {
-    background-color: #b20000;
-    -webkit-box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    -webkit-box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    -webkit-box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@-moz-keyframes glowingred {
-  0% {
-    background-color: #b20000;
-    -moz-box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    -moz-box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    -moz-box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@-o-keyframes glowingred {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@keyframes glowingred {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
+  margin-left: 35px;
+  margin-top: 7%;
 }
 
 .logout-btn {
@@ -568,8 +414,7 @@
 #window-center-3,
 #menu-right,
 #menu-profile-right,
-#window-withdraws,
-#window-deposits,
+#menu-recent-transactions,
 .bitcoin,
 .binance,
 .ethereum,

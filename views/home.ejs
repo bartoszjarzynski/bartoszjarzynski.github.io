@@ -170,36 +170,45 @@
       </div>
 
       <div class="amount-enter">
+        <p class="sell-text">Sell</p>
         <input
           id="amountInput"
           type="text"
-          placeholder="Enter amount USD"
+          maxlength="8"
+          placeholder="Enter amount"
           required
           autocomplete="off"
         />
+        <p class="USD-text">USD</p>
       </div>
+      <div class="horizontal-line" style="background-color: red"></div>
 
-      <div class="deposit-btn">
-        <button type="button" class="deposit">DEPOSIT</button>
+      <div class="amount-enter" style="margin-top: 0">
+        <p class="sell-text">Buy</p>
+        <input
+          id="amountInput"
+          type="text"
+          maxlength="8"
+          placeholder="Enter amount"
+          required
+          autocomplete="off"
+        />
+        <p class="USD-text">USD</p>
       </div>
-      <div class="withdraw-btn">
-        <button type="button" class="withdraw">WITHDRAW</button>
+      <div class="horizontal-line" style="background-color: #16dd16"></div>
+
+      <div class="exchange-button">
+        <button class="exchange" onclick="exchangeButton()">Exchange</button>
       </div>
     </div>
 
-    <div id="window-deposits">
-      <p class="sidetext2">DEPOSITS</p>
-      <p class="amount-wit2">+ $1800</p>
-      <p class="amount-wit2">+ $9000</p>
-      <p class="amount-wit2">+ $2200</p>
-      <p class="amount-wit2">+ $8000</p>
-    </div>
+    <div id="menu-recent-transactions">
+      <div class="form-container-transactions">
+        <p class="text-recent-transactions">Recent transactions</p>
+        <p class="text-transactions-all">All</p>
+      </div>
 
-    <div id="window-withdraws">
-      <p class="sidetext">WITHDRAWS</p>
-      <p class="amount-wit">- $2005</p>
-      <p class="amount-wit">- $1600</p>
-      <p class="amount-wit">- $2011</p>
+      <div class="transaction-number-1"></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -218,7 +227,7 @@
         color: 0x31a121,
         backgroundColor: 0x000000,
       });
-
+      
       var username = "<%= username %>";
       var firstname = "<%= firstname %>";
       var surname = "<%= surname %>";
