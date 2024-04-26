@@ -34,6 +34,7 @@ app.post("/signup", async (req, res) => {
     name: req.body.username,
     mail: req.body.mail,
     password: req.body.password,
+    //balance: 0
   };
 
   // If user exists in the database validation
@@ -75,6 +76,7 @@ app.post("/signup", async (req, res) => {
       firstname: data.firstname, 
       surname: data.surname,
       password: data.password
+      //  , balance: check.balance
     });
   }
 });
