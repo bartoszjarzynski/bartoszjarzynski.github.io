@@ -60,106 +60,7 @@
     </div>
 
     <div id="menu-center">
-      <body>
-        <div class="main-container">
-          <div class="stats-info">
-            <div class="graph-container">
-              <div class="percent">
-                <svg viewBox="0 0 36 36" class="circular-chart">
-                  <path
-                    class="circle"
-                    stroke-dasharray="100, 100"
-                    d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                  <path
-                    class="circle"
-                    stroke-dasharray="85, 100"
-                    d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                  <path
-                    class="circle"
-                    stroke-dasharray="60, 100"
-                    d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                  <path
-                    class="circle"
-                    stroke-dasharray="30, 100"
-                    d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                </svg>
-              </div>
-              <p>Total: $2075</p>
-            </div>
-
-            <div class="info">
-              <p>
-                Most expensive category <br /><span>Restaurants & Dining</span>
-              </p>
-              <p>Updated categories <span>2</span></p>
-              <p>Bonus payments <span>$92</span></p>
-            </div>
-          </div>
-
-          <div class="year-stats">
-            <div class="month-group">
-              <div class="bar h-100"></div>
-              <p class="month">Jan</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">Feb</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Mar</p>
-            </div>
-            <div class="month-group selected">
-              <div class="bar h-75"></div>
-              <p class="month">Apr</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">May</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Jun</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-75"></div>
-              <p class="month">Jul</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Aug</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-50"></div>
-              <p class="month">Sep</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-75"></div>
-              <p class="month">Oct</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-25"></div>
-              <p class="month">Nov</p>
-            </div>
-            <div class="month-group">
-              <div class="bar h-100"></div>
-              <p class="month">Dec</p>
-            </div>
-          </div>
-        </div>
-      </body>
+      
     </div>
 
     <div id="window-center-1">
@@ -201,50 +102,36 @@
     </div>
 
     <div id="menu-right">
-      <p class="wallet-text">Online Wallet</p>
+        <p class="wallet-text">Online Wallet</p>
 
-      <div class="credit-card">
-        <p class="balance-text">BALANCE</p>
-        <p class="balance-account">$7,286.13</p>
-        <p class="card-username"><span id="card-member-display"></span></p>
-        <p class="exp-date">03/29</p>
-      </div>
+        <div class="credit-card">
+            <p class="balance-text">BALANCE</p>
+            <p id="balance" class="balance-account">$ 0</p>
+            <p class="card-username"><span id="card-member-display"></span></p>
+            <p class="exp-date">03/29</p>
+        </div>
 
-      <div class="visa-logo">
-        <img src="public/images/VISA.png" />
-      </div>
+        <div class="visa-logo">
+            <img src="public/images/VISA.png" />
+        </div>
 
-      <div class="amount-enter">
-        <p class="sell-text">Sell</p>
-        <input
-          id="amountInput"
-          type="text"
-          maxlength="8"
-          placeholder="Enter amount"
-          required
-          autocomplete="off"
-        />
-        <p class="USD-text">USD</p>
-      </div>
-      <div class="horizontal-line" style="background-color: red"></div>
+        <div class="amount-enter">
+            <p class="sell-text">Sell</p>
+            <input id="amountInputSell" type="text" maxlength="8" placeholder="Enter amount" required autocomplete="off"/>
+            <p class="USD-text">USD</p>
+        </div>
+        <div class="horizontal-line" style="background-color: red"></div>
 
-      <div class="amount-enter" style="margin-top: 0">
-        <p class="sell-text">Buy</p>
-        <input
-          id="amountInput"
-          type="text"
-          maxlength="8"
-          placeholder="Enter amount"
-          required
-          autocomplete="off"
-        />
-        <p class="USD-text">USD</p>
-      </div>
-      <div class="horizontal-line" style="background-color: #16dd16"></div>
+        <div class="amount-enter" style="margin-top: 0">
+            <p class="sell-text">Buy</p>
+            <input id="amountInputBuy" type="text" maxlength="8" placeholder="Enter amount" required autocomplete="off"/>
+            <p class="USD-text">USD</p>
+        </div>
+        <div class="horizontal-line" style="background-color: #16dd16"></div>
 
-      <div class="exchange-button">
-        <button class="exchange" onclick="exchangeButton()">Exchange</button>
-      </div>
+        <div class="exchange-button">
+            <button class="exchange" onclick="exchangeButton()">Exchange</button>
+        </div>
     </div>
 
     <div id="menu-recent-transactions">
@@ -275,6 +162,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
     <script src="public/script.js"></script>
+    <script src="public/link-script.js"></script>
+    <script src="public/fetchingCrypto.js"></script>
+
     <script>
       VANTA.NET({
         el: "#backgroud",
