@@ -56,37 +56,65 @@
           <img src="images/buymeacoffee.png" id="coffee-link" />
         </div>
       </div>
-
     </div>
 
     <div id="menu-center">
-      
+      <div class="center-backgroud">
+        <div class="profit-text">
+          <p>Profit</p>
+          <p class="profit-value" id="balance">$0</p>
+        </div>
+        <div class="horizontal-line-profit"></div>
+
+        <div class="income-expenses-text">
+          <p class="income-text">Income</p>
+          <p class="expenses-text">Expenses</p>
+        </div>
+
+        <div class="income-expenses-value">
+          <p class="income-value" id="income-value">$0</p>
+          <p class="expenses-value" id="expenses-value">$0</p>
+        </div>
+
+      </div>
     </div>
 
     <div id="window-center-1">
       <img class="bitcoin" src="public/images/bitcoin.png" />
       <p class="name">Bitcoin</p>
       <p class="index">BTC</p>
-      <p class="coin-price" id="bitcoin-price"><span id="bitcoin-price-display" style="color: #fff;"></span></p>
-      <p class="coin-change" id="bitcoin-change"><span id="bitcoin-change-display" style="color: #fff;"></span></p>
+      <p class="coin-price" id="bitcoin-price">
+        <span id="bitcoin-price-display" style="color: #fff"></span>
+      </p>
+      <p class="coin-change" id="bitcoin-change">
+        <span id="bitcoin-change-display" style="color: #fff"></span>
+      </p>
       <!-- Placeholder for Bitcoin price -->
-  </div>
-  <div id="window-center-2">
+    </div>
+    <div id="window-center-2">
       <img class="ethereum" src="public/images/ethereum.png" />
       <p class="name">Ethereum</p>
       <p class="index">ETH</p>
-      <p class="coin-price" id="ethereum-price"><span id="ethereum-price-display" style="color: #fff;"></span></p>
-      <p class="coin-change" id="ethereum-change"><span id="ethereum-change-display" style="color: #fff;"></span></p>
+      <p class="coin-price" id="ethereum-price">
+        <span id="ethereum-price-display" style="color: #fff"></span>
+      </p>
+      <p class="coin-change" id="ethereum-change">
+        <span id="ethereum-change-display" style="color: #fff"></span>
+      </p>
       <!-- Placeholder for Ethereum price -->
-  </div>
-  <div id="window-center-3">
+    </div>
+    <div id="window-center-3">
       <img class="binance" src="public/images/binance.png" />
       <p class="name">Binance</p>
       <p class="index">BNB</p>
-      <p class="coin-price" id="binance-price"><span id="binance-price-display" style="color: #fff;"></span></p>
-      <p class="coin-change" id="binance-change"><span id="binance-change-display" style="color: #fff;"></span></p>
+      <p class="coin-price" id="binance-price">
+        <span id="binance-price-display" style="color: #fff"></span>
+      </p>
+      <p class="coin-change" id="binance-change">
+        <span id="binance-change-display" style="color: #fff"></span>
+      </p>
       <!-- Placeholder for Binance Coin price -->
-  </div>
+    </div>
 
     <div id="menu-profile-right">
       <img src="public/images/person_crop_circle.png" />
@@ -94,7 +122,7 @@
     </div>
 
     <div class="sign-out-right">
-      <a href="/" class="menu-link">
+      <a href="/" class="menu-link" onclick="logout()">
         <div class="logout-btn">
           <i class="gg-log-out"></i>
         </div>
@@ -102,36 +130,50 @@
     </div>
 
     <div id="menu-right">
-        <p class="wallet-text">Online Wallet</p>
+      <p class="wallet-text">Online Wallet</p>
 
-        <div class="credit-card">
-            <p class="balance-text">BALANCE</p>
-            <p id="balance" class="balance-account">$ 0</p>
-            <p class="card-username"><span id="card-member-display"></span></p>
-            <p class="exp-date">03/29</p>
-        </div>
+      <div class="credit-card">
+        <p class="balance-text">BALANCE</p>
+        <p class="balance-account" id="balance-account">$0</p>
+        <p class="card-username"><span id="card-member-display"></span></p>
+        <p class="exp-date">03/29</p>
+      </div>
 
-        <div class="visa-logo">
-            <img src="public/images/VISA.png" />
-        </div>
+      <div class="visa-logo">
+        <img src="public/images/VISA.png" />
+      </div>
 
-        <div class="amount-enter">
-            <p class="sell-text">Sell</p>
-            <input id="amountInputSell" type="text" maxlength="8" placeholder="Enter amount" required autocomplete="off"/>
-            <p class="USD-text">USD</p>
-        </div>
-        <div class="horizontal-line" style="background-color: red"></div>
+      <div class="amount-enter">
+        <p class="sell-text">Sell</p>
+        <input
+          id="amountInputSell"
+          type="text"
+          maxlength="8"
+          placeholder="Enter amount"
+          required
+          autocomplete="off"
+        />
+        <p class="USD-text">USD</p>
+      </div>
+      <div class="horizontal-line" style="background-color: red"></div>
 
-        <div class="amount-enter" style="margin-top: 0">
-            <p class="sell-text">Buy</p>
-            <input id="amountInputBuy" type="text" maxlength="8" placeholder="Enter amount" required autocomplete="off"/>
-            <p class="USD-text">USD</p>
-        </div>
-        <div class="horizontal-line" style="background-color: #16dd16"></div>
+      <div class="amount-enter" style="margin-top: 0">
+        <p class="sell-text">Buy</p>
+        <input
+          id="amountInputBuy"
+          type="text"
+          maxlength="8"
+          placeholder="Enter amount"
+          required
+          autocomplete="off"
+        />
+        <p class="USD-text">USD</p>
+      </div>
+      <div class="horizontal-line" style="background-color: #16dd16"></div>
 
-        <div class="exchange-button">
-            <button class="exchange" onclick="exchangeButton()">Exchange</button>
-        </div>
+      <div class="exchange-button">
+        <button class="exchange" onclick="exchangeButton()">Exchange</button>
+      </div>
     </div>
 
     <div id="menu-recent-transactions">
@@ -141,19 +183,18 @@
       </div>
 
       <div class="transactions">
-        <div class="transaction-number-1">
+        <div id="transaction-1" class="transaction-number-1">
           <img src="images/money_dollar_circle.png" />
           <div class="transaction-text">
             <p class="transaction-title">Sell</p>
-            <p class="transaction-amount">- $149.95</p>
+            <p class="transaction-amount" id="transaction-amount-1">- $0</p>
           </div>
         </div>
-
-        <div class="transaction-number-2">
+        <div id="transaction-2" class="transaction-number-2">
           <img src="images/money_dollar_circle.png" />
           <div class="transaction-text">
             <p class="transaction-title">Buy</p>
-            <p class="transaction-amount">+ $74.10</p>
+            <p class="transaction-amount" id="transaction-amount-2">+ $0</p>
           </div>
         </div>
       </div>

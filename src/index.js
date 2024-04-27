@@ -2,17 +2,16 @@ const express = require("express");
 const path = require("path");
 const bcrypt = require("bcrypt");
 const collection = require("./config");
-const exp = require("constants");
 
 const app = express();
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: false }));
 
 app.set("view engine", "ejs");
 app.use("/public/", express.static("./public"));
 app.use(express.static("public"));
 
+// Routes
 app.get("/", (req, res) => {
   res.render("dash");
 });
@@ -26,7 +25,6 @@ app.get("/signup", (req, res) => {
 });
 
 // Register user
-
 app.post("/signup", async (req, res) => {
   const data = {
     firstname: req.body.firstname,
@@ -34,7 +32,7 @@ app.post("/signup", async (req, res) => {
     name: req.body.username,
     mail: req.body.mail,
     password: req.body.password,
-    //balance: 0
+    balance: req.body.balance,
   };
 
   // If user exists in the database validation
@@ -71,16 +69,17 @@ app.post("/signup", async (req, res) => {
     const userdata = await collection.insertMany(data);
     console.log(userdata);
 
-    res.render("home", { 
-      username: data.name, 
-      firstname: data.firstname, 
+    res.render("home", {
+      username: data.name,
+      firstname: data.firstname,
       surname: data.surname,
-      password: data.password
-      //  , balance: check.balance
+      password: data.password,
+      balance: data.balance,
     });
   }
 });
 
+// Login user
 app.post("/login", async (req, res) => {
   try {
     const check = await collection.findOne({ name: req.body.username });
@@ -95,14 +94,31 @@ app.post("/login", async (req, res) => {
         res.render("home", {
           username: req.body.username,
           firstname: check.firstname,
-          surname: check.surname
+          surname: check.surname,
+          balance: check.balance,
         });
       } else {
         res.render("wrong_password");
       }
     }
   } catch (err) {
-    res.send("Unaspected error: err -> " + err.message);
+    res.send("Unexpected error: " + err.message);
+  }
+});
+
+// Update balance route
+app.post("/updateBalance", async (req, res) => {
+  try {
+    const { username, newBalance } = req.body;
+    // Update balance for the user in the database
+    await collection.findOneAndUpdate(
+      { name: username },
+      { $set: { balance: newBalance } }
+    );
+    res.sendStatus(200); // Send a success response
+  } catch (err) {
+    console.error("Error updating balance:", err);
+    res.status(500).send("Internal Server Error"); // Send an error response
   }
 });
 
