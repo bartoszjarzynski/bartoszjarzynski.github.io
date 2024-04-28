@@ -4,147 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BankPWA - Account</title>
+    <!--Style.css-->
     <link rel="stylesheet" href="public/styles/homeStyle.css" />
+    <!--Font for credit card-->
     <link href="https://fonts.cdnfonts.com/css/credit-card" rel="stylesheet" />
   </head>
   <body>
+    <!-- Backgroud -->
     <div id="backgroud"></div>
+    <!-- Main dashboard on the backgroud -->
     <div id="menu-backgroud">
+      <!-- Application logo in the left upper corner of dashboard -->
       <div class="menu-logo">
         <img src="public/images/LogoHorizontal.png" id="github-link" />
       </div>
     </div>
 
+    <!-- Shortcuts on the left side -->
     <div id="menu-left">
       <div class="shortcuts">
+        <!-- Market shortcut -->
         <div class="shortcut">
           <div class="icon">
             <img src="images/chart_bar_circle_fill.png" />
           </div>
           <button class="market-shortcut" id="market-link">Market</button>
         </div>
-
+        <!-- Dashboard shortcut -->
         <div class="shortcut-dashboard">
           <div class="icon">
             <img src="images/dashboard.png" />
           </div>
           <button class="dashboard-shortcut">Dashboard</button>
         </div>
-
+        <!-- News shortcut -->
         <div class="shortcut">
           <div class="icon">
             <img src="images/envelope_badge_fill.png" />
           </div>
           <button class="news-shortcut" id="news-link">News</button>
         </div>
-
+        <!-- Binance shortcut -->
         <div class="shortcut">
           <div class="icon">
             <img src="images/binance_menu.png" />
           </div>
           <button class="binance-shortcut" id="binance-link">Binance</button>
         </div>
-
+        <!-- Twitter shortcut -->
         <div class="shortcut">
           <div class="icon">
             <img src="images/logo_twitter.png" />
           </div>
           <button class="twitter-shortcut" id="twitter-link">Twitter</button>
         </div>
-
+        <!-- Buy me a coffee shortcut -->
         <div class="buy-coffee">
           <img src="images/buymeacoffee.png" id="coffee-link" />
         </div>
       </div>
     </div>
 
+    <!-- Center dashboard menu -->
     <div id="menu-center">
+      <!-- Profit analyser -->
       <div class="center-backgroud">
+        <!-- Profit / Balance info -->
         <div class="profit-text">
           <p>Profit</p>
           <p class="profit-value" id="balance">$0</p>
         </div>
+        <!-- Horizontal line for a design -->
         <div class="horizontal-line-profit"></div>
-
+        <!-- Incomes and expenses info -->
         <div class="income-expenses-text">
           <p class="income-text">Income</p>
           <p class="expenses-text">Expenses</p>
         </div>
-
+        <!-- Incomes and expenses values -->
         <div class="income-expenses-value">
           <p class="income-value" id="income-value">$0</p>
           <p class="expenses-value" id="expenses-value">$0</p>
         </div>
 
+        <!-- Pie chart -->
+        <div id="chartContainer"></div>
       </div>
     </div>
-
+    <!-- Cryptocurrency info -->
     <div id="window-center-1">
+      <!-- Crypto logo -->
       <img class="bitcoin" src="public/images/bitcoin.png" />
+      <!-- Crypto name -->
       <p class="name">Bitcoin</p>
       <p class="index">BTC</p>
+      <!-- Cryptocoin price display -->
       <p class="coin-price" id="bitcoin-price">
         <span id="bitcoin-price-display" style="color: #fff"></span>
       </p>
+      <!-- Cryptocoin price change in 24h -->
       <p class="coin-change" id="bitcoin-change">
         <span id="bitcoin-change-display" style="color: #fff"></span>
       </p>
       <!-- Placeholder for Bitcoin price -->
     </div>
+    <!-- Cryptocurrency info -->
     <div id="window-center-2">
+      <!-- Crypto logo -->
       <img class="ethereum" src="public/images/ethereum.png" />
+      <!-- Crypto name -->
       <p class="name">Ethereum</p>
       <p class="index">ETH</p>
+      <!-- Cryptocoin price display -->
       <p class="coin-price" id="ethereum-price">
         <span id="ethereum-price-display" style="color: #fff"></span>
       </p>
+      <!-- Cryptocoin price change in 24h -->
       <p class="coin-change" id="ethereum-change">
         <span id="ethereum-change-display" style="color: #fff"></span>
       </p>
-      <!-- Placeholder for Ethereum price -->
     </div>
+    <!-- Cryptocurrency info -->
     <div id="window-center-3">
+      <!-- Crypto logo -->
       <img class="binance" src="public/images/binance.png" />
+      <!-- Crypto name -->
       <p class="name">Binance</p>
       <p class="index">BNB</p>
+      <!-- Cryptocoin price display -->
       <p class="coin-price" id="binance-price">
         <span id="binance-price-display" style="color: #fff"></span>
       </p>
+      <!-- Cryptocoin price change in 24h -->
       <p class="coin-change" id="binance-change">
         <span id="binance-change-display" style="color: #fff"></span>
       </p>
       <!-- Placeholder for Binance Coin price -->
     </div>
 
+    <!-- Profile view? -->
     <div id="menu-profile-right">
+      <!-- Username image default -->
       <img src="public/images/person_crop_circle.png" />
+      <!-- Username display -->
       <p><span id="username-display"></span></p>
     </div>
 
+    <!-- Sign out button -->
     <div class="sign-out-right">
+      <!-- Logout function with a hyperlink -->
       <a href="/" class="menu-link" onclick="logout()">
+        <!-- Sign out button design -->
         <div class="logout-btn">
           <i class="gg-log-out"></i>
         </div>
       </a>
     </div>
 
+    <!-- Card and exchange menu -->
     <div id="menu-right">
       <p class="wallet-text">Online Wallet</p>
-
+      <!-- Credit card design -->
       <div class="credit-card">
         <p class="balance-text">BALANCE</p>
+        <!-- Balance card updating function -->
         <p class="balance-account" id="balance-account">$0</p>
+        <!-- Displaying a username on the card -->
         <p class="card-username"><span id="card-member-display"></span></p>
+        <!-- Static expiration date -->
         <p class="exp-date">03/29</p>
+        <!-- Might be done as a random numbers functino optionally -->
       </div>
 
+      <!-- Visa logo on the card -->
       <div class="visa-logo">
         <img src="public/images/VISA.png" />
       </div>
-
+      <!-- Sell amount enter -->
       <div class="amount-enter">
         <p class="sell-text">Sell</p>
+        <!-- Input for sell amount -->
         <input
           id="amountInputSell"
           type="text"
@@ -155,10 +194,12 @@
         />
         <p class="USD-text">USD</p>
       </div>
+      <!-- Horizontal line for selling -->
       <div class="horizontal-line" style="background-color: red"></div>
-
+      <!-- Buy amount enter -->
       <div class="amount-enter" style="margin-top: 0">
         <p class="sell-text">Buy</p>
+        <!-- Input for buy amount -->
         <input
           id="amountInputBuy"
           type="text"
@@ -169,43 +210,53 @@
         />
         <p class="USD-text">USD</p>
       </div>
+      <!-- Horizontal line for buy -->
       <div class="horizontal-line" style="background-color: #16dd16"></div>
 
+      <!-- Exchange button with a function for adding balance etc. -->
       <div class="exchange-button">
         <button class="exchange" onclick="exchangeButton()">Exchange</button>
       </div>
     </div>
 
+    <!-- Recent transations -->
     <div id="menu-recent-transactions">
       <div class="form-container-transactions">
         <p class="text-recent-transactions">Recent transactions</p>
         <p class="text-transactions-all">All</p>
+        <!-- Must add a functionality for displaying all the transactions in the future-->
       </div>
-
+      <!-- Recent sell transaction -->
       <div class="transactions">
         <div id="transaction-1" class="transaction-number-1">
           <img src="images/money_dollar_circle.png" />
           <div class="transaction-text">
             <p class="transaction-title">Sell</p>
+            <!-- Recent sell amount -->
             <p class="transaction-amount" id="transaction-amount-1">- $0</p>
           </div>
         </div>
+        <!-- Recent buy transaction -->
         <div id="transaction-2" class="transaction-number-2">
           <img src="images/money_dollar_circle.png" />
           <div class="transaction-text">
             <p class="transaction-title">Buy</p>
+            <!-- Recent buy amount -->
             <p class="transaction-amount" id="transaction-amount-2">+ $0</p>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Importing scipts from JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
     <script src="public/script.js"></script>
     <script src="public/link-script.js"></script>
     <script src="public/fetchingCrypto.js"></script>
-
+    <script src="public/chart.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <!-- Backgroud script -->
     <script>
       VANTA.NET({
         el: "#backgroud",
@@ -219,7 +270,7 @@
         color: 0x31a121,
         backgroundColor: 0x000000,
       });
-
+      // Initiating username, firstname and surname for displaying on the card and profile menu
       var username = "<%= username %>";
       var firstname = "<%= firstname %>";
       var surname = "<%= surname %>";
