@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var span = document.getElementById("username-display");
     span.textContent = username;
   });
-  
   // Firstname and surname display at the card
   document.addEventListener("DOMContentLoaded", function () {
     var span = document.getElementById("card-member-display");

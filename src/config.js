@@ -30,7 +30,7 @@ const LoginSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  balance: {
+  balanceValue: {
     type: Number,
     default: 0,
   }

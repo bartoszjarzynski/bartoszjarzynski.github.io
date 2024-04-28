@@ -32,7 +32,7 @@ app.post("/signup", async (req, res) => {
     name: req.body.username,
     mail: req.body.mail,
     password: req.body.password,
-    balance: req.body.balance,
+    balanceValue: req.body.balanceValue,
   };
 
   // If user exists in the database validation
@@ -74,7 +74,7 @@ app.post("/signup", async (req, res) => {
       firstname: data.firstname,
       surname: data.surname,
       password: data.password,
-      balance: data.balance,
+      balanceValue: data.balanceValue,
     });
   }
 });
@@ -95,7 +95,7 @@ app.post("/login", async (req, res) => {
           username: req.body.username,
           firstname: check.firstname,
           surname: check.surname,
-          balance: check.balance,
+          balanceValue: check.balanceValue,
         });
       } else {
         res.render("wrong_password");
@@ -103,22 +103,6 @@ app.post("/login", async (req, res) => {
     }
   } catch (err) {
     res.send("Unexpected error: " + err.message);
-  }
-});
-
-// Update balance route
-app.post("/updateBalance", async (req, res) => {
-  try {
-    const { username, newBalance } = req.body;
-    // Update balance for the user in the database
-    await collection.findOneAndUpdate(
-      { name: username },
-      { $set: { balance: newBalance } }
-    );
-    res.sendStatus(200); // Send a success response
-  } catch (err) {
-    console.error("Error updating balance:", err);
-    res.status(500).send("Internal Server Error"); // Send an error response
   }
 });
 

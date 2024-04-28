@@ -10,7 +10,7 @@ window.onload = function () {
         yValueFormatString: '##0.00"%"',
         indexLabel: "{label} {y}",
         indexLabelFontColor: "#ccc",
-        indexLabelFontSize: 13,
+        indexLabelFontSize: 18,
         dataPoints: [
           { y: 0, label: "Incomes", color: "#16dd16" },
           { y: 0, label: "Expenses", color: "#ff0000" },
@@ -121,22 +121,22 @@ function dismissPopup() {
 }
 
 // Updating transactions in All transactions div
-function updateTransactions(amountSell, amountBuy) {
+async function updateTransactions(amountSell, amountBuy) {
   // Get reference to the containers
-  var incomesContainer = document.querySelector('.pop-incomes');
-  var expensesContainer = document.querySelector('.pop-expenses');
+  var incomesContainer = document.querySelector(".pop-incomes");
+  var expensesContainer = document.querySelector(".pop-expenses");
 
   // Create new paragraph elements for incomes and expenses
-  var incomeParagraph = document.createElement('p');
-  var expenseParagraph = document.createElement('p');
+  var incomeParagraph = document.createElement("p");
+  var expenseParagraph = document.createElement("p");
 
   // Set the class for styling
-  incomeParagraph.className = 'transaction-item';
-  expenseParagraph.className = 'transaction-item';
+  incomeParagraph.className = "transaction-item";
+  expenseParagraph.className = "transaction-item";
 
   // Style for the paragraphs
-  incomeParagraph.style.color = "#ccc",
-  expenseParagraph.style.color = "#ccc";
+  (incomeParagraph.style.color = "#ccc"),
+    (expenseParagraph.style.color = "#ccc");
 
   // Set the text content based on the transaction amount
   if (!isNaN(amountSell)) {
