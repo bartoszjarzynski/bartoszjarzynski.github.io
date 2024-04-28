@@ -65,9 +65,7 @@ async function exchangeButton() {
       document.getElementById("income-value").innerText.replace("$", "")
     );
     incomeValue += amountBuy;
-    document.getElementById("income-value").innerText = `$${incomeValue.toFixed(
-      2
-    )}`;
+    document.getElementById("income-value").innerText = `$${incomeValue.toFixed(2)}`;
   }
 
   // Update the balance display in both sections
@@ -89,4 +87,24 @@ async function exchangeButton() {
   chart.options.data[0].dataPoints[0].y = incomePercentage;
   chart.options.data[0].dataPoints[1].y = expensesPercentage;
   chart.render();
+
+  if (newBalance < 0){
+    displayPopup();
+  }
+}
+
+function displayPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "flex";
+  popup.style.opacity = "0";
+  // Animation for appearing in 1s
+  setTimeout(function() {
+    popup.style.opacity = "1";
+  }, 0);
+  document.getElementById("dismissButton").addEventListener("click", dismissPopup);
+}
+
+function dismissPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "none";
 }
