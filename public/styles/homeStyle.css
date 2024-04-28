@@ -247,7 +247,6 @@ p.expenses-value {
   text-align: center;
 }
 
-
 .popup-message {
   display: block;
   margin-bottom: 10px;
@@ -273,9 +272,81 @@ p.expenses-value {
   border: 1px solid #ff0000;
 }
 
+.all-transactions-pop {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
 
+.pop-all-elements {
+  background: #212b3b;
+  width: 450px;
+  height: 550px;
+  border-radius: 25px;
+}
 
+.pop-info {
+  display: flex;
+  align-items: center;
+  margin: 50px 0 0 50px;
+}
 
+.pop-transactions-text {
+  color: #ccc;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.transaction-pop-close {
+  cursor: pointer;
+  color: #ccc;
+  margin-left: 120px;
+  transition: 1s ease-in-out;
+}
+
+button.transaction-pop-close:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.horizontal-line-pop {
+  background-color: #ccc;
+  height: 1px;
+  width: 400px;
+  margin: 10px auto;
+  opacity: 0.3;
+}
+
+.pop-transactions-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto 0 auto;
+  gap: 150px;
+}
+
+.pop-incomes, .pop-expenses {
+  display: table-column;
+  height: 400px;
+}
+
+.pop-incomes-text, .pop-expenses-text {
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.incomes-pop-value, .expenses-pop-value {
+  color: #ccc;
+  margin-top: 5px;
+}
 
 #window-center-1,
 #window-center-2,

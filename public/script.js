@@ -65,7 +65,9 @@ async function exchangeButton() {
       document.getElementById("income-value").innerText.replace("$", "")
     );
     incomeValue += amountBuy;
-    document.getElementById("income-value").innerText = `$${incomeValue.toFixed(2)}`;
+    document.getElementById("income-value").innerText = `$${incomeValue.toFixed(
+      2
+    )}`;
   }
 
   // Update the balance display in both sections
@@ -87,24 +89,82 @@ async function exchangeButton() {
   chart.options.data[0].dataPoints[0].y = incomePercentage;
   chart.options.data[0].dataPoints[1].y = expensesPercentage;
   chart.render();
-
-  if (newBalance < 0){
+  // If balance is less than 0, then show the notification
+  if (newBalance < 0) {
     displayPopup();
   }
+
+  // Update transactions in the pop-up
+  updateTransactions(amountSell, amountBuy);
 }
 
+// Notification when balance is less than 0
 function displayPopup() {
   var popup = document.getElementById("popup");
+  //Change display and opacity to flex and 0, then start an animation
   popup.style.display = "flex";
   popup.style.opacity = "0";
   // Animation for appearing in 1s
-  setTimeout(function() {
+  setTimeout(function () {
     popup.style.opacity = "1";
   }, 0);
-  document.getElementById("dismissButton").addEventListener("click", dismissPopup);
+  //Dismiss the notification, when the button is clicked
+  document
+    .getElementById("dismissButton")
+    .addEventListener("click", dismissPopup);
 }
-
+//Clicking button to dismiss the notification
 function dismissPopup() {
   var popup = document.getElementById("popup");
+  //Chaning display to 'none', it is not visible anymore
   popup.style.display = "none";
 }
+
+// Updating transactions in All transactions div
+function updateTransactions(amountSell, amountBuy) {
+  // Get reference to the containers
+  var incomesContainer = document.querySelector('.pop-incomes');
+  var expensesContainer = document.querySelector('.pop-expenses');
+
+  // Create new paragraph elements for incomes and expenses
+  var incomeParagraph = document.createElement('p');
+  var expenseParagraph = document.createElement('p');
+
+  // Set the class for styling
+  incomeParagraph.className = 'transaction-item';
+  expenseParagraph.className = 'transaction-item';
+
+  // Style for the paragraphs
+  incomeParagraph.style.color = "#ccc",
+  expenseParagraph.style.color = "#ccc";
+
+  // Set the text content based on the transaction amount
+  if (!isNaN(amountSell)) {
+    incomeParagraph.textContent = `- $${amountSell.toFixed(2)}`;
+    expensesContainer.appendChild(incomeParagraph);
+  }
+
+  if (!isNaN(amountBuy)) {
+    expenseParagraph.textContent = `+ $${amountBuy.toFixed(2)}`;
+    incomesContainer.appendChild(expenseParagraph);
+  }
+}
+
+// All transactions display changing from none to flex
+document
+  .querySelector(".text-transactions-all")
+  .addEventListener("click", function () {
+    var popup = document.getElementById("all-transactions-pop");
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "flex";
+    } else {
+      popup.style.display = "none";
+    }
+  });
+
+document
+  .getElementById("transaction-pop-close")
+  .addEventListener("click", function () {
+    var popup = document.getElementById("all-transactions-pop");
+    popup.style.display = "none";
+  });
